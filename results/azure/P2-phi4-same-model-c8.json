@@ -1,0 +1,1478 @@
+{
+  "meta": {
+    "cloud": "real endpoint https://ais-inversiongap-xxxxx.openai.azure.com/openai/deployments/phi-4/chat/completions?api-version=2024-10-21 (model phi-4, auth ApiKey)",
+    "cloud_concurrency": 8,
+    "edge_concurrency": 32,
+    "edge_endpoints": [
+      "http://127.0.0.1:11435",
+      "http://127.0.0.1:11436"
+    ],
+    "edge_format": "Json",
+    "edge_model": "phi4:latest",
+    "events": 40,
+    "price_in_per_m": 0.125,
+    "price_out_per_m": 0.5,
+    "profile": null,
+    "seed": 42,
+    "sovereign_pct": 100.0,
+    "timestamp": "2026-11-01T12:35:54.836305600+00:00"
+  },
+  "cloud": {
+    "label": "cloud",
+    "total": 40,
+    "completed": 29,
+    "failed": 11,
+    "started": true,
+    "done": true,
+    "elapsed_s": 85.6690834,
+    "throughput_ops": 0.33851185105594345,
+    "avg_ms": 16121.209867499998,
+    "p50_ms": 18714.663399999998,
+    "p95_ms": 24050.3861,
+    "network_ms": 40064.74130000001,
+    "auth_ms": 0.02959999999999999,
+    "gateway_ms": 0.0,
+    "queue_ms": 604522.0,
+    "inference_ms": 0.0,
+    "serde_us": 1085.1000000000001,
+    "bytes_tx": 153476,
+    "bytes_rx": 61932,
+    "retries": 219,
+    "token_fetches": 0,
+    "tokens_in": 4065,
+    "tokens_out": 694,
+    "cost_usd": 0.0008551250000000001,
+    "rubric_graded": 29,
+    "rubric_severity_exact": 19,
+    "rubric_severity_within_one": 28,
+    "rubric_action_exact": 17
+  },
+  "edge": {
+    "label": "edge",
+    "total": 40,
+    "completed": 40,
+    "failed": 0,
+    "started": true,
+    "done": true,
+    "elapsed_s": 1.8007797,
+    "throughput_ops": 22.21260046412118,
+    "avg_ms": 978.1971125,
+    "p50_ms": 1002.5987,
+    "p95_ms": 1210.7144,
+    "network_ms": 168.1827000000004,
+    "auth_ms": 0.0,
+    "gateway_ms": 0.0,
+    "queue_ms": 4715.877801999999,
+    "inference_ms": 34243.82399799999,
+    "serde_us": 794.9999999999999,
+    "bytes_tx": 25667,
+    "bytes_rx": 17177,
+    "retries": 0,
+    "token_fetches": 0,
+    "tokens_in": 5838,
+    "tokens_out": 965,
+    "cost_usd": 0.0,
+    "rubric_graded": 40,
+    "rubric_severity_exact": 31,
+    "rubric_severity_within_one": 40,
+    "rubric_action_exact": 22
+  },
+  "gap": {
+    "throughput_x": 65.61838350660953,
+    "latency_x": 16.480533076098197,
+    "tax_pct": 100.0,
+    "tax_ms_per_call": 16121.209867499998,
+    "cloud_cost_usd": 0.0008551250000000001,
+    "cloud_cost_per_million": 29.487068965517246,
+    "cloud_egress_bytes": 153476
+  },
+  "cloud_verdicts": [
+    {
+      "event_id": 1,
+      "kind": "lateral_movement",
+      "latency_ms": 4678.273,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "remote_service_creation",
+        "confidence": 0.85
+      },
+      "expected": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "lateral_movement",
+        "confidence": 0.9
+      },
+      "error": null
+    },
+    {
+      "event_id": 2,
+      "kind": "benign_login",
+      "latency_ms": 1857.9575,
+      "verdict": {
+        "severity": "low",
+        "action": "monitor",
+        "category": "authentication_success",
+        "confidence": 0.9
+      },
+      "expected": {
+        "severity": "low",
+        "action": "ignore",
+        "category": "benign_auth",
+        "confidence": 0.96
+      },
+      "error": null
+    },
+    {
+      "event_id": 3,
+      "kind": "malware_hash",
+      "latency_ms": 19664.6417,
+      "verdict": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "ransomware_detection",
+        "confidence": 0.95
+      },
+      "expected": {
+        "severity": "critical",
+        "action": "block",
+        "category": "malware",
+        "confidence": 0.97
+      },
+      "error": null
+    },
+    {
+      "event_id": 4,
+      "kind": "lateral_movement",
+      "latency_ms": 21939.3675,
+      "verdict": null,
+      "expected": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "lateral_movement",
+        "confidence": 0.9
+      },
+      "error": "HTTP 429 Too Many Requests: {\"error\":{\"code\":\"RateLimitReached\",\"message\":\"Your requests to Phi-4 for phi-4 in westus have exceeded request rate limit.\",\"details\":\"Your requests to Phi-4 for phi-4 in westus have exceeded request"
+    },
+    {
+      "event_id": 5,
+      "kind": "impossible_travel",
+      "latency_ms": 16714.9969,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "suspicious_logon_activity",
+        "confidence": 0.9
+      },
+      "expected": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "account_compromise",
+        "confidence": 0.84
+      },
+      "error": null
+    },
+    {
+      "event_id": 6,
+      "kind": "privilege_escalation",
+      "latency_ms": 21932.0734,
+      "verdict": null,
+      "expected": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "privilege_escalation",
+        "confidence": 0.95
+      },
+      "error": "HTTP 429 Too Many Requests: {\"error\":{\"code\":\"RateLimitReached\",\"message\":\"Your requests to Phi-4 for phi-4 in westus have exceeded request rate limit.\",\"details\":\"Your requests to Phi-4 for phi-4 in westus have exceeded request"
+    },
+    {
+      "event_id": 7,
+      "kind": "port_scan",
+      "latency_ms": 7666.7347,
+      "verdict": {
+        "severity": "high",
+        "action": "block",
+        "category": "syn_sweep_attempt",
+        "confidence": 0.95
+      },
+      "expected": {
+        "severity": "medium",
+        "action": "monitor",
+        "category": "reconnaissance",
+        "confidence": 0.81
+      },
+      "error": null
+    },
+    {
+      "event_id": 8,
+      "kind": "cert_expiry",
+      "latency_ms": 10649.2777,
+      "verdict": {
+        "severity": "low",
+        "action": "monitor",
+        "category": "tls_certificate_expiry",
+        "confidence": 0.8
+      },
+      "expected": {
+        "severity": "medium",
+        "action": "monitor",
+        "category": "certificate_hygiene",
+        "confidence": 0.91
+      },
+      "error": null
+    },
+    {
+      "event_id": 9,
+      "kind": "suspicious_powershell",
+      "latency_ms": 23069.9176,
+      "verdict": null,
+      "expected": {
+        "severity": "critical",
+        "action": "block",
+        "category": "malicious_script",
+        "confidence": 0.92
+      },
+      "error": "HTTP 429 Too Many Requests: {\"error\":{\"code\":\"RateLimitReached\",\"message\":\"Your requests to Phi-4 for phi-4 in westus have exceeded request rate limit.\",\"details\":\"Your requests to Phi-4 for phi-4 in westus have exceeded request"
+    },
+    {
+      "event_id": 10,
+      "kind": "malware_hash",
+      "latency_ms": 8998.8016,
+      "verdict": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "ransomware_detection",
+        "confidence": 0.95
+      },
+      "expected": {
+        "severity": "critical",
+        "action": "block",
+        "category": "malware",
+        "confidence": 0.97
+      },
+      "error": null
+    },
+    {
+      "event_id": 11,
+      "kind": "privilege_escalation",
+      "latency_ms": 23272.6802,
+      "verdict": null,
+      "expected": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "privilege_escalation",
+        "confidence": 0.95
+      },
+      "error": "HTTP 429 Too Many Requests: {\"error\":{\"code\":\"RateLimitReached\",\"message\":\"Your requests to Phi-4 for phi-4 in westus have exceeded request rate limit.\",\"details\":\"Your requests to Phi-4 for phi-4 in westus have exceeded request"
+    },
+    {
+      "event_id": 12,
+      "kind": "dns_exfiltration",
+      "latency_ms": 23289.449,
+      "verdict": null,
+      "expected": {
+        "severity": "high",
+        "action": "block",
+        "category": "data_exfiltration",
+        "confidence": 0.88
+      },
+      "error": "HTTP 429 Too Many Requests: {\"error\":{\"code\":\"RateLimitReached\",\"message\":\"Your requests to Phi-4 for phi-4 in westus have exceeded request rate limit.\",\"details\":\"Your requests to Phi-4 for phi-4 in westus have exceeded request"
+    },
+    {
+      "event_id": 13,
+      "kind": "privilege_escalation",
+      "latency_ms": 15007.4425,
+      "verdict": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "uid_privilege_escalation",
+        "confidence": 0.9
+      },
+      "expected": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "privilege_escalation",
+        "confidence": 0.95
+      },
+      "error": null
+    },
+    {
+      "event_id": 14,
+      "kind": "impossible_travel",
+      "latency_ms": 5946.1865,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "suspicious_login",
+        "confidence": 0.8
+      },
+      "expected": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "account_compromise",
+        "confidence": 0.84
+      },
+      "error": null
+    },
+    {
+      "event_id": 15,
+      "kind": "privilege_escalation",
+      "latency_ms": 6010.783799999999,
+      "verdict": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "privilege_escalation",
+        "confidence": 0.95
+      },
+      "expected": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "privilege_escalation",
+        "confidence": 0.95
+      },
+      "error": null
+    },
+    {
+      "event_id": 16,
+      "kind": "impossible_travel",
+      "latency_ms": 18941.300600000002,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "suspicious_sign_in",
+        "confidence": 0.8
+      },
+      "expected": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "account_compromise",
+        "confidence": 0.84
+      },
+      "error": null
+    },
+    {
+      "event_id": 17,
+      "kind": "suspicious_powershell",
+      "latency_ms": 23999.1673,
+      "verdict": null,
+      "expected": {
+        "severity": "critical",
+        "action": "block",
+        "category": "malicious_script",
+        "confidence": 0.92
+      },
+      "error": "HTTP 429 Too Many Requests: {\"error\":{\"code\":\"RateLimitReached\",\"message\":\"Your requests to Phi-4 for phi-4 in westus have exceeded request rate limit.\",\"details\":\"Your requests to Phi-4 for phi-4 in westus have exceeded request"
+    },
+    {
+      "event_id": 18,
+      "kind": "cert_expiry",
+      "latency_ms": 23984.159300000003,
+      "verdict": {
+        "severity": "low",
+        "action": "monitor",
+        "category": "certificate_expiry",
+        "confidence": 0.8
+      },
+      "expected": {
+        "severity": "medium",
+        "action": "monitor",
+        "category": "certificate_hygiene",
+        "confidence": 0.91
+      },
+      "error": null
+    },
+    {
+      "event_id": 19,
+      "kind": "suspicious_powershell",
+      "latency_ms": 9979.8426,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "suspicious_powershell_execution",
+        "confidence": 0.9
+      },
+      "expected": {
+        "severity": "critical",
+        "action": "block",
+        "category": "malicious_script",
+        "confidence": 0.92
+      },
+      "error": null
+    },
+    {
+      "event_id": 20,
+      "kind": "service_crash_loop",
+      "latency_ms": 6013.2568,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "system_restart_frequent",
+        "confidence": 0.9
+      },
+      "expected": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "availability",
+        "confidence": 0.89
+      },
+      "error": null
+    },
+    {
+      "event_id": 21,
+      "kind": "impossible_travel",
+      "latency_ms": 15064.9772,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "suspicious_login_activity",
+        "confidence": 0.85
+      },
+      "expected": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "account_compromise",
+        "confidence": 0.84
+      },
+      "error": null
+    },
+    {
+      "event_id": 22,
+      "kind": "lateral_movement",
+      "latency_ms": 18714.663399999998,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "rapid_share_connection",
+        "confidence": 0.9
+      },
+      "expected": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "lateral_movement",
+        "confidence": 0.9
+      },
+      "error": null
+    },
+    {
+      "event_id": 23,
+      "kind": "dns_exfiltration",
+      "latency_ms": 6011.4173,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "malicious_dns_activity",
+        "confidence": 0.85
+      },
+      "expected": {
+        "severity": "high",
+        "action": "block",
+        "category": "data_exfiltration",
+        "confidence": 0.88
+      },
+      "error": null
+    },
+    {
+      "event_id": 24,
+      "kind": "service_crash_loop",
+      "latency_ms": 23999.6324,
+      "verdict": null,
+      "expected": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "availability",
+        "confidence": 0.89
+      },
+      "error": "HTTP 429 Too Many Requests: {\"error\":{\"code\":\"RateLimitReached\",\"message\":\"Your requests to Phi-4 for phi-4 in westus have exceeded request rate limit.\",\"details\":\"Your requests to Phi-4 for phi-4 in westus have exceeded request"
+    },
+    {
+      "event_id": 25,
+      "kind": "privilege_escalation",
+      "latency_ms": 23024.3594,
+      "verdict": null,
+      "expected": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "privilege_escalation",
+        "confidence": 0.95
+      },
+      "error": "HTTP 429 Too Many Requests: {\"error\":{\"code\":\"RateLimitReached\",\"message\":\"Your requests to Phi-4 for phi-4 in westus have exceeded request rate limit.\",\"details\":\"Your requests to Phi-4 for phi-4 in westus have exceeded request"
+    },
+    {
+      "event_id": 26,
+      "kind": "disk_pressure",
+      "latency_ms": 20904.0772,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "disk_usage",
+        "confidence": 0.9
+      },
+      "expected": {
+        "severity": "medium",
+        "action": "monitor",
+        "category": "capacity",
+        "confidence": 0.86
+      },
+      "error": null
+    },
+    {
+      "event_id": 27,
+      "kind": "benign_login",
+      "latency_ms": 14720.8187,
+      "verdict": {
+        "severity": "low",
+        "action": "monitor",
+        "category": "authorized_access",
+        "confidence": 0.9
+      },
+      "expected": {
+        "severity": "low",
+        "action": "ignore",
+        "category": "benign_auth",
+        "confidence": 0.96
+      },
+      "error": null
+    },
+    {
+      "event_id": 28,
+      "kind": "privilege_escalation",
+      "latency_ms": 24279.3843,
+      "verdict": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "os_privesc_via_unexpected_binary",
+        "confidence": 0.95
+      },
+      "expected": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "privilege_escalation",
+        "confidence": 0.95
+      },
+      "error": null
+    },
+    {
+      "event_id": 29,
+      "kind": "dns_exfiltration",
+      "latency_ms": 15790.6418,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "dns_query_suspicion",
+        "confidence": 0.85
+      },
+      "expected": {
+        "severity": "high",
+        "action": "block",
+        "category": "data_exfiltration",
+        "confidence": 0.88
+      },
+      "error": null
+    },
+    {
+      "event_id": 30,
+      "kind": "brute_force",
+      "latency_ms": 18222.8476,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "brute_force_ssh",
+        "confidence": 0.9
+      },
+      "expected": {
+        "severity": "high",
+        "action": "block",
+        "category": "brute_force",
+        "confidence": 0.93
+      },
+      "error": null
+    },
+    {
+      "event_id": 31,
+      "kind": "brute_force",
+      "latency_ms": 2966.2093,
+      "verdict": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "failed_login_attempts",
+        "confidence": 0.95
+      },
+      "expected": {
+        "severity": "high",
+        "action": "block",
+        "category": "brute_force",
+        "confidence": 0.93
+      },
+      "error": null
+    },
+    {
+      "event_id": 32,
+      "kind": "impossible_travel",
+      "latency_ms": 24558.7342,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "suspicious_activity",
+        "confidence": 0.9
+      },
+      "expected": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "account_compromise",
+        "confidence": 0.84
+      },
+      "error": null
+    },
+    {
+      "event_id": 33,
+      "kind": "dns_exfiltration",
+      "latency_ms": 23343.906600000002,
+      "verdict": null,
+      "expected": {
+        "severity": "high",
+        "action": "block",
+        "category": "data_exfiltration",
+        "confidence": 0.88
+      },
+      "error": "HTTP 429 Too Many Requests: {\"error\":{\"code\":\"RateLimitReached\",\"message\":\"Your requests to Phi-4 for phi-4 in westus have exceeded request rate limit.\",\"details\":\"Your requests to Phi-4 for phi-4 in westus have exceeded request"
+    },
+    {
+      "event_id": 34,
+      "kind": "dns_exfiltration",
+      "latency_ms": 24002.356,
+      "verdict": null,
+      "expected": {
+        "severity": "high",
+        "action": "block",
+        "category": "data_exfiltration",
+        "confidence": 0.88
+      },
+      "error": "HTTP 429 Too Many Requests: {\"error\":{\"code\":\"RateLimitReached\",\"message\":\"Your requests to Phi-4 for phi-4 in westus have exceeded request rate limit.\",\"details\":\"Your requests to Phi-4 for phi-4 in westus have exceeded request"
+    },
+    {
+      "event_id": 35,
+      "kind": "privilege_escalation",
+      "latency_ms": 21751.490100000003,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "privilege_escalation",
+        "confidence": 0.9
+      },
+      "expected": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "privilege_escalation",
+        "confidence": 0.95
+      },
+      "error": null
+    },
+    {
+      "event_id": 36,
+      "kind": "impossible_travel",
+      "latency_ms": 24050.3861,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "suspicious_login",
+        "confidence": 0.9
+      },
+      "expected": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "account_compromise",
+        "confidence": 0.84
+      },
+      "error": null
+    },
+    {
+      "event_id": 37,
+      "kind": "service_crash_loop",
+      "latency_ms": 23207.786200000002,
+      "verdict": null,
+      "expected": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "availability",
+        "confidence": 0.89
+      },
+      "error": "HTTP 429 Too Many Requests: {\"error\":{\"code\":\"RateLimitReached\",\"message\":\"Your requests to Phi-4 for phi-4 in westus have exceeded request rate limit.\",\"details\":\"Your requests to Phi-4 for phi-4 in westus have exceeded request"
+    },
+    {
+      "event_id": 38,
+      "kind": "benign_login",
+      "latency_ms": 5781.5965,
+      "verdict": {
+        "severity": "low",
+        "action": "ignore",
+        "category": "account_sign_in",
+        "confidence": 0.9
+      },
+      "expected": {
+        "severity": "low",
+        "action": "ignore",
+        "category": "benign_auth",
+        "confidence": 0.96
+      },
+      "error": null
+    },
+    {
+      "event_id": 39,
+      "kind": "port_scan",
+      "latency_ms": 5817.826099999999,
+      "verdict": {
+        "severity": "critical",
+        "action": "block",
+        "category": "port_scan_suspicion",
+        "confidence": 0.95
+      },
+      "expected": {
+        "severity": "medium",
+        "action": "monitor",
+        "category": "reconnaissance",
+        "confidence": 0.81
+      },
+      "error": null
+    },
+    {
+      "event_id": 40,
+      "kind": "privilege_escalation",
+      "latency_ms": 15018.9741,
+      "verdict": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "uid_change_via_unsetuid",
+        "confidence": 0.95
+      },
+      "expected": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "privilege_escalation",
+        "confidence": 0.95
+      },
+      "error": null
+    }
+  ],
+  "edge_verdicts": [
+    {
+      "event_id": 1,
+      "kind": "lateral_movement",
+      "latency_ms": 769.1286,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "smb_service_creation",
+        "confidence": 0.9
+      },
+      "expected": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "lateral_movement",
+        "confidence": 0.9
+      },
+      "error": null
+    },
+    {
+      "event_id": 2,
+      "kind": "benign_login",
+      "latency_ms": 806.0292,
+      "verdict": {
+        "severity": "low",
+        "action": "monitor",
+        "category": "authentication_event",
+        "confidence": 0.8
+      },
+      "expected": {
+        "severity": "low",
+        "action": "ignore",
+        "category": "benign_auth",
+        "confidence": 0.96
+      },
+      "error": null
+    },
+    {
+      "event_id": 3,
+      "kind": "malware_hash",
+      "latency_ms": 1000.8043,
+      "verdict": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "ransomware_detection",
+        "confidence": 0.95
+      },
+      "expected": {
+        "severity": "critical",
+        "action": "block",
+        "category": "malware",
+        "confidence": 0.97
+      },
+      "error": null
+    },
+    {
+      "event_id": 4,
+      "kind": "lateral_movement",
+      "latency_ms": 995.1527,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "smb_service_creation",
+        "confidence": 0.9
+      },
+      "expected": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "lateral_movement",
+        "confidence": 0.9
+      },
+      "error": null
+    },
+    {
+      "event_id": 5,
+      "kind": "impossible_travel",
+      "latency_ms": 1129.6474999999998,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "suspicious_sign_in",
+        "confidence": 0.85
+      },
+      "expected": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "account_compromise",
+        "confidence": 0.84
+      },
+      "error": null
+    },
+    {
+      "event_id": 6,
+      "kind": "privilege_escalation",
+      "latency_ms": 1039.2776999999999,
+      "verdict": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "privilege_escalation",
+        "confidence": 0.95
+      },
+      "expected": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "privilege_escalation",
+        "confidence": 0.95
+      },
+      "error": null
+    },
+    {
+      "event_id": 7,
+      "kind": "port_scan",
+      "latency_ms": 885.722,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "network_scan",
+        "confidence": 0.9
+      },
+      "expected": {
+        "severity": "medium",
+        "action": "monitor",
+        "category": "reconnaissance",
+        "confidence": 0.81
+      },
+      "error": null
+    },
+    {
+      "event_id": 8,
+      "kind": "cert_expiry",
+      "latency_ms": 829.3627,
+      "verdict": {
+        "severity": "medium",
+        "action": "monitor",
+        "category": "certificate_expiration",
+        "confidence": 0.8
+      },
+      "expected": {
+        "severity": "medium",
+        "action": "monitor",
+        "category": "certificate_hygiene",
+        "confidence": 0.91
+      },
+      "error": null
+    },
+    {
+      "event_id": 9,
+      "kind": "suspicious_powershell",
+      "latency_ms": 1212.6562999999999,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "suspicious_powershell_execution",
+        "confidence": 0.85
+      },
+      "expected": {
+        "severity": "critical",
+        "action": "block",
+        "category": "malicious_script",
+        "confidence": 0.92
+      },
+      "error": null
+    },
+    {
+      "event_id": 10,
+      "kind": "malware_hash",
+      "latency_ms": 1005.6168000000001,
+      "verdict": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "ransomware_detection",
+        "confidence": 0.95
+      },
+      "expected": {
+        "severity": "critical",
+        "action": "block",
+        "category": "malware",
+        "confidence": 0.97
+      },
+      "error": null
+    },
+    {
+      "event_id": 11,
+      "kind": "privilege_escalation",
+      "latency_ms": 1129.1746,
+      "verdict": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "privilege_escalation",
+        "confidence": 0.95
+      },
+      "expected": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "privilege_escalation",
+        "confidence": 0.95
+      },
+      "error": null
+    },
+    {
+      "event_id": 12,
+      "kind": "dns_exfiltration",
+      "latency_ms": 1004.2297,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "dns_query_anomaly",
+        "confidence": 0.85
+      },
+      "expected": {
+        "severity": "high",
+        "action": "block",
+        "category": "data_exfiltration",
+        "confidence": 0.88
+      },
+      "error": null
+    },
+    {
+      "event_id": 13,
+      "kind": "privilege_escalation",
+      "latency_ms": 1128.5136,
+      "verdict": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "privilege_escalation",
+        "confidence": 0.95
+      },
+      "expected": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "privilege_escalation",
+        "confidence": 0.95
+      },
+      "error": null
+    },
+    {
+      "event_id": 14,
+      "kind": "impossible_travel",
+      "latency_ms": 1004.9817999999999,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "suspicious_login",
+        "confidence": 0.85
+      },
+      "expected": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "account_compromise",
+        "confidence": 0.84
+      },
+      "error": null
+    },
+    {
+      "event_id": 15,
+      "kind": "privilege_escalation",
+      "latency_ms": 1126.8302,
+      "verdict": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "privilege_escalation",
+        "confidence": 0.95
+      },
+      "expected": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "privilege_escalation",
+        "confidence": 0.95
+      },
+      "error": null
+    },
+    {
+      "event_id": 16,
+      "kind": "impossible_travel",
+      "latency_ms": 1037.0502,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "suspicious_sign_in",
+        "confidence": 0.85
+      },
+      "expected": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "account_compromise",
+        "confidence": 0.84
+      },
+      "error": null
+    },
+    {
+      "event_id": 17,
+      "kind": "suspicious_powershell",
+      "latency_ms": 1211.6828,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "suspicious_powershell_execution",
+        "confidence": 0.85
+      },
+      "expected": {
+        "severity": "critical",
+        "action": "block",
+        "category": "malicious_script",
+        "confidence": 0.92
+      },
+      "error": null
+    },
+    {
+      "event_id": 18,
+      "kind": "cert_expiry",
+      "latency_ms": 828.1183,
+      "verdict": {
+        "severity": "medium",
+        "action": "monitor",
+        "category": "certificate_expiration",
+        "confidence": 0.9
+      },
+      "expected": {
+        "severity": "medium",
+        "action": "monitor",
+        "category": "certificate_hygiene",
+        "confidence": 0.91
+      },
+      "error": null
+    },
+    {
+      "event_id": 19,
+      "kind": "suspicious_powershell",
+      "latency_ms": 1210.7144,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "suspicious_powershell_execution",
+        "confidence": 0.9
+      },
+      "expected": {
+        "severity": "critical",
+        "action": "block",
+        "category": "malicious_script",
+        "confidence": 0.92
+      },
+      "error": null
+    },
+    {
+      "event_id": 20,
+      "kind": "service_crash_loop",
+      "latency_ms": 1002.7444,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "service_restart_anomaly",
+        "confidence": 0.9
+      },
+      "expected": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "availability",
+        "confidence": 0.89
+      },
+      "error": null
+    },
+    {
+      "event_id": 21,
+      "kind": "impossible_travel",
+      "latency_ms": 1125.8174000000001,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "suspicious_sign_in",
+        "confidence": 0.85
+      },
+      "expected": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "account_compromise",
+        "confidence": 0.84
+      },
+      "error": null
+    },
+    {
+      "event_id": 22,
+      "kind": "lateral_movement",
+      "latency_ms": 1002.5987,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "smb_service_creation",
+        "confidence": 0.9
+      },
+      "expected": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "lateral_movement",
+        "confidence": 0.9
+      },
+      "error": null
+    },
+    {
+      "event_id": 23,
+      "kind": "dns_exfiltration",
+      "latency_ms": 996.3824,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "dns_query_anomaly",
+        "confidence": 0.85
+      },
+      "expected": {
+        "severity": "high",
+        "action": "block",
+        "category": "data_exfiltration",
+        "confidence": 0.88
+      },
+      "error": null
+    },
+    {
+      "event_id": 24,
+      "kind": "service_crash_loop",
+      "latency_ms": 1002.4877000000001,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "service_restart_anomaly",
+        "confidence": 0.9
+      },
+      "expected": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "availability",
+        "confidence": 0.89
+      },
+      "error": null
+    },
+    {
+      "event_id": 25,
+      "kind": "privilege_escalation",
+      "latency_ms": 1125.9283,
+      "verdict": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "privilege_escalation",
+        "confidence": 0.95
+      },
+      "expected": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "privilege_escalation",
+        "confidence": 0.95
+      },
+      "error": null
+    },
+    {
+      "event_id": 26,
+      "kind": "disk_pressure",
+      "latency_ms": 908.6062000000001,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "disk_usage_alert",
+        "confidence": 0.9
+      },
+      "expected": {
+        "severity": "medium",
+        "action": "monitor",
+        "category": "capacity",
+        "confidence": 0.86
+      },
+      "error": null
+    },
+    {
+      "event_id": 27,
+      "kind": "benign_login",
+      "latency_ms": 879.9146,
+      "verdict": {
+        "severity": "low",
+        "action": "monitor",
+        "category": "user_sign_in",
+        "confidence": 0.8
+      },
+      "expected": {
+        "severity": "low",
+        "action": "ignore",
+        "category": "benign_auth",
+        "confidence": 0.96
+      },
+      "error": null
+    },
+    {
+      "event_id": 28,
+      "kind": "privilege_escalation",
+      "latency_ms": 1034.3949,
+      "verdict": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "uid_change_via_setuid",
+        "confidence": 0.95
+      },
+      "expected": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "privilege_escalation",
+        "confidence": 0.95
+      },
+      "error": null
+    },
+    {
+      "event_id": 29,
+      "kind": "dns_exfiltration",
+      "latency_ms": 1009.5305000000001,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "dns_query_anomaly",
+        "confidence": 0.85
+      },
+      "expected": {
+        "severity": "high",
+        "action": "block",
+        "category": "data_exfiltration",
+        "confidence": 0.88
+      },
+      "error": null
+    },
+    {
+      "event_id": 30,
+      "kind": "brute_force",
+      "latency_ms": 1001.9165,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "brute_force_ssh",
+        "confidence": 0.9
+      },
+      "expected": {
+        "severity": "high",
+        "action": "block",
+        "category": "brute_force",
+        "confidence": 0.93
+      },
+      "error": null
+    },
+    {
+      "event_id": 31,
+      "kind": "brute_force",
+      "latency_ms": 1008.7348000000001,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "brute_force_ssh",
+        "confidence": 0.9
+      },
+      "expected": {
+        "severity": "high",
+        "action": "block",
+        "category": "brute_force",
+        "confidence": 0.93
+      },
+      "error": null
+    },
+    {
+      "event_id": 32,
+      "kind": "impossible_travel",
+      "latency_ms": 1033.616,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "suspicious_sign_in",
+        "confidence": 0.85
+      },
+      "expected": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "account_compromise",
+        "confidence": 0.84
+      },
+      "error": null
+    },
+    {
+      "event_id": 33,
+      "kind": "dns_exfiltration",
+      "latency_ms": 894.0541,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "dns_abuse",
+        "confidence": 0.85
+      },
+      "expected": {
+        "severity": "high",
+        "action": "block",
+        "category": "data_exfiltration",
+        "confidence": 0.88
+      },
+      "error": null
+    },
+    {
+      "event_id": 34,
+      "kind": "dns_exfiltration",
+      "latency_ms": 814.9972,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "dns_query_anomaly",
+        "confidence": 0.85
+      },
+      "expected": {
+        "severity": "high",
+        "action": "block",
+        "category": "data_exfiltration",
+        "confidence": 0.88
+      },
+      "error": null
+    },
+    {
+      "event_id": 35,
+      "kind": "privilege_escalation",
+      "latency_ms": 969.9064,
+      "verdict": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "privilege_escalation",
+        "confidence": 0.95
+      },
+      "expected": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "privilege_escalation",
+        "confidence": 0.95
+      },
+      "error": null
+    },
+    {
+      "event_id": 36,
+      "kind": "impossible_travel",
+      "latency_ms": 810.1038000000001,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "suspicious_sign_in",
+        "confidence": 0.85
+      },
+      "expected": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "account_compromise",
+        "confidence": 0.84
+      },
+      "error": null
+    },
+    {
+      "event_id": 37,
+      "kind": "service_crash_loop",
+      "latency_ms": 906.0603000000001,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "service_restart_anomaly",
+        "confidence": 0.9
+      },
+      "expected": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "availability",
+        "confidence": 0.89
+      },
+      "error": null
+    },
+    {
+      "event_id": 38,
+      "kind": "benign_login",
+      "latency_ms": 713.9301,
+      "verdict": {
+        "severity": "low",
+        "action": "monitor",
+        "category": "user_sign_in",
+        "confidence": 0.8
+      },
+      "expected": {
+        "severity": "low",
+        "action": "ignore",
+        "category": "benign_auth",
+        "confidence": 0.96
+      },
+      "error": null
+    },
+    {
+      "event_id": 39,
+      "kind": "port_scan",
+      "latency_ms": 859.2927999999999,
+      "verdict": {
+        "severity": "high",
+        "action": "escalate",
+        "category": "network_scan",
+        "confidence": 0.9
+      },
+      "expected": {
+        "severity": "medium",
+        "action": "monitor",
+        "category": "reconnaissance",
+        "confidence": 0.81
+      },
+      "error": null
+    },
+    {
+      "event_id": 40,
+      "kind": "privilege_escalation",
+      "latency_ms": 672.1740000000001,
+      "verdict": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "privilege_escalation",
+        "confidence": 0.95
+      },
+      "expected": {
+        "severity": "critical",
+        "action": "escalate",
+        "category": "privilege_escalation",
+        "confidence": 0.95
+      },
+      "error": null
+    }
+  ]
+}

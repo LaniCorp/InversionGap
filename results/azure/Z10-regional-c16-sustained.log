@@ -1,0 +1,93 @@
+﻿inversion-gap · resolving edge endpoints…
+  model phi3:latest (format Json) on http://127.0.0.1:11435, http://127.0.0.1:11436
+  warming up model on 2 endpoint(s) (untimed)…
+    http://127.0.0.1:11435: ready in 0.45s
+    http://127.0.0.1:11436: ready in 0.37s
+  cloud: real endpoint https://aoai-inversiongap-xxxxx.openai.azure.com/openai/deployments/gpt-41-mini/chat/completions?api-version=2024-10-21 (model gpt-41-mini, auth ApiKey)
+  [  1.0s] cloud  15/600 (14.98 ops/s)   edge  16/600 (16.00 ops/s)
+  [  2.0s] cloud  46/600 (22.96 ops/s)   edge  43/600 (21.48 ops/s)
+  [  3.0s] cloud  72/600 (23.85 ops/s)   edge  70/600 (23.20 ops/s)
+  [  4.0s] cloud  98/600 (24.39 ops/s)   edge 108/600 (26.88 ops/s)
+  [  5.0s] cloud 126/600 (25.07 ops/s)   edge 140/600 (27.86 ops/s)
+  [  6.0s] cloud 151/600 (25.02 ops/s)   edge 173/600 (28.67 ops/s)
+  [  7.0s] cloud 180/600 (25.58 ops/s)   edge 201/600 (28.57 ops/s)
+  [  8.0s] cloud 211/600 (26.24 ops/s)   edge 230/600 (28.60 ops/s)
+  [  9.0s] cloud 229/600 (25.32 ops/s)   edge 258/600 (28.53 ops/s)
+  [ 10.0s] cloud 231/600 (23.00 ops/s)   edge 284/600 (28.28 ops/s)
+  [ 11.0s] cloud 240/600 (21.28 ops/s)   edge 314/600 (28.43 ops/s)
+  [ 12.0s] cloud 249/600 (19.76 ops/s)   edge 339/600 (28.14 ops/s)
+  [ 13.0s] cloud 257/600 (18.47 ops/s)   edge 363/600 (27.82 ops/s)
+  [ 14.0s] cloud 266/600 (17.44 ops/s)   edge 388/600 (27.62 ops/s)
+  [ 15.1s] cloud 274/600 (16.48 ops/s)   edge 411/600 (27.31 ops/s)
+  [ 16.1s] cloud 284/600 (15.70 ops/s)   edge 433/600 (26.97 ops/s)
+  [ 17.1s] cloud 291/600 (14.89 ops/s)   edge 462/600 (27.09 ops/s)
+  [ 18.1s] cloud 301/600 (14.29 ops/s)   edge 486/600 (26.91 ops/s)
+  [ 19.1s] cloud 309/600 (13.75 ops/s)   edge 512/600 (26.87 ops/s)
+  [ 20.1s] cloud 316/600 (13.21 ops/s)   edge 536/600 (26.72 ops/s)
+  [ 21.1s] cloud 325/600 (12.72 ops/s)   edge 568/600 (26.97 ops/s)
+  [ 22.1s] cloud 333/600 (12.33 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 23.1s] cloud 341/600 (11.92 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 24.1s] cloud 351/600 (11.59 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 25.1s] cloud 355/600 (11.21 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 26.1s] cloud 367/600 (10.93 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 27.1s] cloud 374/600 (10.64 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 28.1s] cloud 385/600 (10.40 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 29.1s] cloud 392/600 (10.15 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 30.1s] cloud 398/600 (9.91 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 31.1s] cloud 410/600 (9.72 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 32.1s] cloud 415/600 (9.51 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 33.1s] cloud 425/600 (9.34 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 34.1s] cloud 433/600 (9.16 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 35.1s] cloud 439/600 (8.98 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 36.1s] cloud 450/600 (8.81 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 37.1s] cloud 458/600 (8.66 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 38.1s] cloud 466/600 (8.53 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 39.1s] cloud 474/600 (8.39 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 40.1s] cloud 483/600 (8.28 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 41.1s] cloud 490/600 (8.15 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 42.1s] cloud 500/600 (8.03 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 43.1s] cloud 509/600 (7.94 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 44.1s] cloud 517/600 (7.85 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 45.1s] cloud 526/600 (7.72 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 46.1s] cloud 534/600 (7.64 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 47.1s] cloud 540/600 (7.54 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 48.1s] cloud 553/600 (7.44 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 49.1s] cloud 559/600 (7.37 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 50.1s] cloud 566/600 (7.29 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 51.1s] cloud 575/600 (7.22 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 52.1s] cloud 583/600 (7.14 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 53.1s] cloud 588/600 (7.04 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 54.1s] cloud 597/600 (6.99 ops/s)   edge 600/600 (27.34 ops/s)
+  [ 55.1s] cloud 600/600 (6.95 ops/s)   edge 600/600 (27.34 ops/s)
+
+──────────────────────────────────────────────────────────────────────────────
+                                      Cloud/API-Wrapper        Sovereign Edge
+──────────────────────────────────────────────────────────────────────────────
+ Completed / failed                           381 / 219               600 / 0
+ Wall time                                      54.79 s               21.95 s
+ Throughput                                  6.95 ops/s           27.34 ops/s
+ Latency avg                                     1.43 s                1.15 s
+ Latency p50 / p95                      799 ms / 2.54 s       1.13 s / 1.55 s
+ Network RTT (cum.) / loopback                  343.1 s                1.15 s
+ Auth overhead (cum.)                    1 ms (0 fetch)                  0 ms
+ Gateway / service overhead (cum.)                90.5 s                  0 ms
+ 429 back-off / local queue (cum.)354.3 s (2081 retries)                70.1 s
+ Serde overhead (cum.)                         20593 µs              20080 µs
+ Inference (cum.)                                66.1 s               617.8 s
+ Payload off-host                                1.5 MB                   0 B
+ Tokens in / out                           54034 / 8847        115664 / 17466
+ Cost                                           $0.0393                 $0.00
+ Rubric severity exact / ±1                  60% / 100%             42% / 76%
+ Rubric action exact                                64%                   38%
+──────────────────────────────────────────────────────────────────────────────
+ ⚡ Edge is 3.9x Faster & 100% Sovereign
+ Latency multiple: 1.2x   Orchestration tax: 92% of each cloud call (1.32 s non-inference)
+ Token meter: $0.0393 this run → $103 per 1M events
+──────────────────────────────────────────────────────────────────────────────
+ last cloud error: HTTP 429 Too Many Requests: {
+  "error": {
+    "message": "Your requests to gpt-4.1-mini for gpt-41-mini in westus have exceeded request rate limit.",
+    "type": "too_many_requests",
+    "param": null,
+    "code": "rate_limit_e
+ wrote C:\Development\Studio\InversionGap\results\azure\Z10-regional-c16-sustained.json

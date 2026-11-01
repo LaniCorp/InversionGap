@@ -1,0 +1,70 @@
+﻿inversion-gap · resolving edge endpoints…
+  model phi3:latest (format Json) on http://127.0.0.1:11435, http://127.0.0.1:11436
+  warming up model on 2 endpoint(s) (untimed)…
+    http://127.0.0.1:11435: ready in 0.52s
+    http://127.0.0.1:11436: ready in 0.54s
+  cloud: in-process mock gateway, synthetic upstream · profile azure-openai (WAN 25-60ms, model 150-400ms, quota 8, +0 meta-prompt tok)
+  [  1.0s] cloud   2/100 (2.00 ops/s)   edge  23/100 (22.98 ops/s)
+  [  2.0s] cloud   4/100 (2.00 ops/s)   edge  50/100 (24.97 ops/s)
+  [  3.0s] cloud   6/100 (2.00 ops/s)   edge  88/100 (29.31 ops/s)
+  [  4.0s] cloud   9/100 (2.25 ops/s)   edge 100/100 (28.67 ops/s)
+  [  5.0s] cloud  12/100 (2.40 ops/s)   edge 100/100 (28.67 ops/s)
+  [  6.0s] cloud  14/100 (2.33 ops/s)   edge 100/100 (28.67 ops/s)
+  [  7.0s] cloud  17/100 (2.43 ops/s)   edge 100/100 (28.67 ops/s)
+  [  8.0s] cloud  19/100 (2.37 ops/s)   edge 100/100 (28.67 ops/s)
+  [  9.0s] cloud  22/100 (2.44 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 10.0s] cloud  25/100 (2.50 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 11.0s] cloud  28/100 (2.54 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 12.0s] cloud  31/100 (2.58 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 13.0s] cloud  34/100 (2.61 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 14.0s] cloud  36/100 (2.57 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 15.0s] cloud  39/100 (2.60 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 16.0s] cloud  42/100 (2.62 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 17.0s] cloud  44/100 (2.58 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 18.0s] cloud  46/100 (2.55 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 19.0s] cloud  49/100 (2.58 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 20.0s] cloud  51/100 (2.55 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 21.0s] cloud  54/100 (2.57 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 22.0s] cloud  57/100 (2.59 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 23.0s] cloud  60/100 (2.61 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 24.0s] cloud  62/100 (2.58 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 25.0s] cloud  65/100 (2.60 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 26.0s] cloud  68/100 (2.61 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 27.0s] cloud  71/100 (2.63 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 28.0s] cloud  73/100 (2.60 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 29.0s] cloud  76/100 (2.62 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 30.0s] cloud  78/100 (2.60 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 31.0s] cloud  81/100 (2.61 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 32.0s] cloud  84/100 (2.62 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 33.0s] cloud  87/100 (2.63 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 34.0s] cloud  90/100 (2.64 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 35.0s] cloud  93/100 (2.65 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 36.0s] cloud  96/100 (2.66 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 37.0s] cloud  99/100 (2.67 ops/s)   edge 100/100 (28.67 ops/s)
+  [ 38.1s] cloud 100/100 (2.67 ops/s)   edge 100/100 (28.67 ops/s)
+
+──────────────────────────────────────────────────────────────────────────────
+                                      Cloud/API-Wrapper        Sovereign Edge
+──────────────────────────────────────────────────────────────────────────────
+ Completed / failed                             100 / 0               100 / 0
+ Wall time                                      37.47 s                3.49 s
+ Throughput                                  2.67 ops/s           28.67 ops/s
+ Latency avg                                     375 ms                978 ms
+ Latency p50 / p95                      385 ms / 484 ms       956 ms / 1.39 s
+ Network RTT (cum.) / loopback                   4.41 s                204 ms
+ Auth overhead (cum.)                  831 ms (1 fetch)                  0 ms
+ Gateway policy + safety (cum.)                  4.67 s                  0 ms
+ 429 back-off / local queue (cum.)      0 ms (0 retries)                18.3 s
+ Serde overhead (cum.)                         10484 µs               2394 µs
+ Inference (cum.)                                27.3 s                79.3 s
+ Payload off-host                              180.5 KB                   0 B
+ Tokens in / out                           10435 / 2125          19145 / 2943
+ Cost                                           $0.0473                 $0.00
+ Rubric severity exact / ±1                 100% / 100%             35% / 72%
+ Rubric action exact                               100%                   33%
+──────────────────────────────────────────────────────────────────────────────
+ ⚡ Edge is 10.7x Faster & 100% Sovereign
+ Latency multiple: 0.4x   Orchestration tax: 27% of each cloud call (102 ms non-inference)
+ Token meter: $0.0473 this run → $473 per 1M events
+──────────────────────────────────────────────────────────────────────────────
+ wrote C:\Development\Studio\InversionGap\results\suite\A4-azure-openai-c1.json

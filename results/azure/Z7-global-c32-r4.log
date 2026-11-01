@@ -1,0 +1,36 @@
+﻿inversion-gap · resolving edge endpoints…
+  model phi3:latest (format Json) on http://127.0.0.1:11435, http://127.0.0.1:11436
+  warming up model on 2 endpoint(s) (untimed)…
+    http://127.0.0.1:11435: ready in 0.46s
+    http://127.0.0.1:11436: ready in 0.46s
+  cloud: real endpoint https://aoai-inversiongap-xxxxx.openai.azure.com/openai/deployments/gpt-41-mini-global/chat/completions?api-version=2024-10-21 (model gpt-41-mini-global, auth ApiKey)
+  [  1.0s] cloud  19/100 (18.98 ops/s)   edge  15/100 (15.00 ops/s)
+  [  2.0s] cloud  56/100 (27.97 ops/s)   edge  49/100 (24.49 ops/s)
+  [  3.0s] cloud  87/100 (28.97 ops/s)   edge  78/100 (25.99 ops/s)
+  [  4.0s] cloud 100/100 (27.22 ops/s)   edge 100/100 (26.98 ops/s)
+
+──────────────────────────────────────────────────────────────────────────────
+                                      Cloud/API-Wrapper        Sovereign Edge
+──────────────────────────────────────────────────────────────────────────────
+ Completed / failed                             100 / 0               100 / 0
+ Wall time                                       3.67 s                3.71 s
+ Throughput                                 27.22 ops/s           26.98 ops/s
+ Latency avg                                     946 ms                1.03 s
+ Latency p50 / p95                      981 ms / 1.31 s       1.07 s / 1.47 s
+ Network RTT (cum.) / loopback                   51.5 s                268 ms
+ Auth overhead (cum.)                    0 ms (0 fetch)                  0 ms
+ Gateway / service overhead (cum.)                25.0 s                  0 ms
+ 429 back-off / local queue (cum.)      0 ms (0 retries)                20.4 s
+ Serde overhead (cum.)                          3972 µs               2739 µs
+ Inference (cum.)                                18.0 s                82.0 s
+ Payload off-host                               59.1 KB                   0 B
+ Tokens in / out                           14176 / 2365          19145 / 2929
+ Cost                                           $0.0095                 $0.00
+ Rubric severity exact / ±1                  61% / 100%             36% / 75%
+ Rubric action exact                                58%                   32%
+──────────────────────────────────────────────────────────────────────────────
+ Cloud is 1.0x faster — edge pool under-provisioned (raise OLLAMA_NUM_PARALLEL / add GPU endpoints)
+ Latency multiple: 0.9x   Orchestration tax: 81% of each cloud call (765 ms non-inference)
+ Token meter: $0.0095 this run → $94.54 per 1M events
+──────────────────────────────────────────────────────────────────────────────
+ wrote C:\Development\Studio\InversionGap\results\azure\Z7-global-c32-r4.json

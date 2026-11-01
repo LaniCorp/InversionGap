@@ -1,0 +1,70 @@
+﻿inversion-gap · resolving edge endpoints…
+  model phi3:latest (format Json) on http://127.0.0.1:11435, http://127.0.0.1:11436
+  warming up model on 2 endpoint(s) (untimed)…
+    http://127.0.0.1:11435: ready in 0.56s
+    http://127.0.0.1:11436: ready in 0.60s
+  cloud: real endpoint https://aoai-inversiongap-xxxxx.openai.azure.com/openai/deployments/gpt-41-mini/chat/completions?api-version=2024-10-21 (model gpt-41-mini, auth ApiKey)
+  [  1.0s] cloud   1/60 (1.00 ops/s)   edge  15/60 (14.98 ops/s)
+  [  2.0s] cloud   3/60 (1.50 ops/s)   edge  33/60 (16.47 ops/s)
+  [  3.0s] cloud   4/60 (1.33 ops/s)   edge  60/60 (24.68 ops/s)
+  [  4.0s] cloud   6/60 (1.50 ops/s)   edge  60/60 (24.68 ops/s)
+  [  5.0s] cloud   8/60 (1.60 ops/s)   edge  60/60 (24.68 ops/s)
+  [  6.0s] cloud   9/60 (1.50 ops/s)   edge  60/60 (24.68 ops/s)
+  [  7.0s] cloud  11/60 (1.57 ops/s)   edge  60/60 (24.68 ops/s)
+  [  8.0s] cloud  13/60 (1.62 ops/s)   edge  60/60 (24.68 ops/s)
+  [  9.0s] cloud  15/60 (1.66 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 10.0s] cloud  17/60 (1.70 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 11.0s] cloud  19/60 (1.72 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 12.0s] cloud  20/60 (1.66 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 13.1s] cloud  22/60 (1.69 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 14.1s] cloud  24/60 (1.71 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 15.1s] cloud  25/60 (1.66 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 16.1s] cloud  27/60 (1.68 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 17.1s] cloud  28/60 (1.64 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 18.1s] cloud  30/60 (1.66 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 19.1s] cloud  32/60 (1.67 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 20.1s] cloud  34/60 (1.69 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 21.1s] cloud  34/60 (1.61 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 22.1s] cloud  36/60 (1.63 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 23.1s] cloud  38/60 (1.64 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 24.2s] cloud  39/60 (1.61 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 25.2s] cloud  41/60 (1.63 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 26.2s] cloud  43/60 (1.64 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 27.2s] cloud  44/60 (1.62 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 28.2s] cloud  45/60 (1.59 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 29.2s] cloud  47/60 (1.61 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 30.2s] cloud  48/60 (1.59 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 31.3s] cloud  50/60 (1.60 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 32.3s] cloud  51/60 (1.58 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 33.3s] cloud  53/60 (1.59 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 34.3s] cloud  55/60 (1.60 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 35.3s] cloud  57/60 (1.62 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 36.3s] cloud  58/60 (1.60 ops/s)   edge  60/60 (24.68 ops/s)
+  [ 37.3s] cloud  60/60 (1.63 ops/s)   edge  60/60 (24.68 ops/s)
+ dashboard snapshots in results\azure\snapshots-real
+
+──────────────────────────────────────────────────────────────────────────────
+                                      Cloud/API-Wrapper        Sovereign Edge
+──────────────────────────────────────────────────────────────────────────────
+ Completed / failed                              60 / 0                60 / 0
+ Wall time                                      36.89 s                2.43 s
+ Throughput                                  1.63 ops/s           24.68 ops/s
+ Latency avg                                     615 ms                1.11 s
+ Latency p50 / p95                      578 ms / 891 ms       1.16 s / 1.47 s
+ Network RTT (cum.) / loopback                   10.3 s                194 ms
+ Auth overhead (cum.)                    0 ms (0 fetch)                  0 ms
+ Gateway / service overhead (cum.)                16.1 s                  0 ms
+ 429 back-off / local queue (cum.)      0 ms (0 retries)                21.5 s
+ Serde overhead (cum.)                          2588 µs               1242 µs
+ Inference (cum.)                                10.5 s                44.9 s
+ Payload off-host                               35.0 KB                   0 B
+ Tokens in / out                            8489 / 1433          11446 / 1793
+ Cost                                           $0.0063                 $0.00
+ Rubric severity exact / ±1                  67% / 100%             35% / 78%
+ Rubric action exact                                57%                   22%
+──────────────────────────────────────────────────────────────────────────────
+ ⚡ Edge is 15.2x Faster & 100% Sovereign
+ Latency multiple: 0.6x   Orchestration tax: 72% of each cloud call (440 ms non-inference)
+ Token meter: $0.0063 this run → $104 per 1M events
+──────────────────────────────────────────────────────────────────────────────
+ wrote results\azure\snapshot-real-run.json

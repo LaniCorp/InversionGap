@@ -1,0 +1,48 @@
+﻿inversion-gap · resolving edge endpoints…
+  model qwen3.6:35b-a3b (format Json, think=false) on http://127.0.0.1:11435, http://127.0.0.1:11436
+  warming up model on 2 endpoint(s) (untimed)…
+    http://127.0.0.1:11435: ready in 0.58s
+    http://127.0.0.1:11436: ready in 0.58s
+  cloud: in-process mock gateway, synthetic upstream · profile azure-copilot (WAN 60-110ms, model 150-500ms, quota 4, +900 meta-prompt tok)
+  [  1.0s] cloud   5/100 (5.00 ops/s)   edge   6/100 (6.00 ops/s)
+  [  2.0s] cloud  12/100 (5.99 ops/s)   edge  12/100 (5.99 ops/s)
+  [  3.0s] cloud  20/100 (6.66 ops/s)   edge  18/100 (5.99 ops/s)
+  [  4.0s] cloud  29/100 (7.24 ops/s)   edge  25/100 (6.24 ops/s)
+  [  5.0s] cloud  37/100 (7.39 ops/s)   edge  32/100 (6.39 ops/s)
+  [  6.0s] cloud  45/100 (7.49 ops/s)   edge  38/100 (6.33 ops/s)
+  [  7.0s] cloud  50/100 (7.13 ops/s)   edge  44/100 (6.28 ops/s)
+  [  8.0s] cloud  57/100 (7.12 ops/s)   edge  52/100 (6.49 ops/s)
+  [  9.0s] cloud  65/100 (7.21 ops/s)   edge  58/100 (6.44 ops/s)
+  [ 10.0s] cloud  73/100 (7.29 ops/s)   edge  64/100 (6.39 ops/s)
+  [ 11.0s] cloud  81/100 (7.35 ops/s)   edge  71/100 (6.45 ops/s)
+  [ 12.0s] cloud  89/100 (7.41 ops/s)   edge  78/100 (6.49 ops/s)
+  [ 13.0s] cloud  95/100 (7.30 ops/s)   edge  84/100 (6.45 ops/s)
+  [ 14.0s] cloud 100/100 (7.38 ops/s)   edge  92/100 (6.56 ops/s)
+  [ 15.0s] cloud 100/100 (7.38 ops/s)   edge  98/100 (6.52 ops/s)
+  [ 16.0s] cloud 100/100 (7.38 ops/s)   edge 100/100 (6.57 ops/s)
+
+──────────────────────────────────────────────────────────────────────────────
+                                      Cloud/API-Wrapper        Sovereign Edge
+──────────────────────────────────────────────────────────────────────────────
+ Completed / failed                             100 / 0               100 / 0
+ Wall time                                      13.54 s               15.21 s
+ Throughput                                  7.38 ops/s            6.57 ops/s
+ Latency avg                                     531 ms                304 ms
+ Latency p50 / p95                      525 ms / 695 ms       308 ms / 321 ms
+ Network RTT (cum.) / loopback                   8.71 s                 67 ms
+ Auth overhead (cum.)                  2.40 s (1 fetch)                  0 ms
+ Gateway policy + safety (cum.)                  9.67 s                  0 ms
+ 429 back-off / local queue (cum.)      0 ms (0 retries)                4.42 s
+ Serde overhead (cum.)                         11890 µs               2828 µs
+ Inference (cum.)                                32.1 s                25.9 s
+ Payload off-host                              180.5 KB                   0 B
+ Tokens in / out                          100435 / 2125          17226 / 4000
+ Cost                                           $0.2723                 $0.00
+ Rubric severity exact / ±1                 100% / 100%            68% / 100%
+ Rubric action exact                               100%                   58%
+──────────────────────────────────────────────────────────────────────────────
+ Cloud is 1.1x faster — edge pool under-provisioned (raise OLLAMA_NUM_PARALLEL / add GPU endpoints)
+ Latency multiple: 1.7x   Orchestration tax: 40% of each cloud call (210 ms non-inference)
+ Token meter: $0.2723 this run → $2723 per 1M events
+──────────────────────────────────────────────────────────────────────────────
+ wrote C:\Development\Studio\InversionGap\results\suite\B2-qwen-cloud-c4-at-quota.json

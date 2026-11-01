@@ -1,0 +1,49 @@
+﻿inversion-gap · resolving edge endpoints…
+  model qwen3.6:35b-a3b (format Json, think=false) on http://127.0.0.1:11435, http://127.0.0.1:11436
+  warming up model on 2 endpoint(s) (untimed)…
+    http://127.0.0.1:11435: ready in 0.51s
+    http://127.0.0.1:11436: ready in 0.49s
+  cloud: real endpoint https://aoai-inversiongap-xxxxx.openai.azure.com/openai/deployments/gpt-41-mini-global/chat/completions?api-version=2024-10-21 (model gpt-41-mini-global, auth ApiKey)
+  [  1.0s] cloud  20/100 (19.97 ops/s)   edge   5/100 (5.00 ops/s)
+  [  2.0s] cloud  41/100 (20.47 ops/s)   edge  11/100 (5.50 ops/s)
+  [  3.0s] cloud  72/100 (23.91 ops/s)   edge  18/100 (5.98 ops/s)
+  [  4.0s] cloud 100/100 (25.47 ops/s)   edge  24/100 (5.98 ops/s)
+  [  5.0s] cloud 100/100 (25.47 ops/s)   edge  30/100 (5.98 ops/s)
+  [  6.0s] cloud 100/100 (25.47 ops/s)   edge  36/100 (5.97 ops/s)
+  [  7.0s] cloud 100/100 (25.47 ops/s)   edge  42/100 (5.96 ops/s)
+  [  8.1s] cloud 100/100 (25.47 ops/s)   edge  48/100 (5.96 ops/s)
+  [  9.1s] cloud 100/100 (25.47 ops/s)   edge  54/100 (5.96 ops/s)
+  [ 10.1s] cloud 100/100 (25.47 ops/s)   edge  60/100 (5.96 ops/s)
+  [ 11.1s] cloud 100/100 (25.47 ops/s)   edge  66/100 (5.96 ops/s)
+  [ 12.1s] cloud 100/100 (25.47 ops/s)   edge  72/100 (5.96 ops/s)
+  [ 13.1s] cloud 100/100 (25.47 ops/s)   edge  78/100 (5.96 ops/s)
+  [ 14.1s] cloud 100/100 (25.47 ops/s)   edge  84/100 (5.95 ops/s)
+  [ 15.1s] cloud 100/100 (25.47 ops/s)   edge  90/100 (5.96 ops/s)
+  [ 16.1s] cloud 100/100 (25.47 ops/s)   edge  96/100 (5.96 ops/s)
+  [ 17.1s] cloud 100/100 (25.47 ops/s)   edge 100/100 (6.03 ops/s)
+
+──────────────────────────────────────────────────────────────────────────────
+                                      Cloud/API-Wrapper        Sovereign Edge
+──────────────────────────────────────────────────────────────────────────────
+ Completed / failed                             100 / 0               100 / 0
+ Wall time                                       3.93 s               16.59 s
+ Throughput                                 25.47 ops/s            6.03 ops/s
+ Latency avg                                     1.09 s                332 ms
+ Latency p50 / p95                      985 ms / 1.59 s       332 ms / 357 ms
+ Network RTT (cum.) / loopback                   59.2 s                154 ms
+ Auth overhead (cum.)                    0 ms (0 fetch)                  0 ms
+ Gateway / service overhead (cum.)                30.1 s                  0 ms
+ 429 back-off / local queue (cum.)      0 ms (0 retries)                5.97 s
+ Serde overhead (cum.)                          3725 µs               2722 µs
+ Inference (cum.)                                19.4 s                27.1 s
+ Payload off-host                               59.1 KB                   0 B
+ Tokens in / out                           14176 / 2374          17226 / 4015
+ Cost                                           $0.0095                 $0.00
+ Rubric severity exact / ±1                  59% / 100%            68% / 100%
+ Rubric action exact                                57%                   57%
+──────────────────────────────────────────────────────────────────────────────
+ Cloud is 4.2x faster — edge pool under-provisioned (raise OLLAMA_NUM_PARALLEL / add GPU endpoints)
+ Latency multiple: 3.3x   Orchestration tax: 82% of each cloud call (893 ms non-inference)
+ Token meter: $0.0095 this run → $94.69 per 1M events
+──────────────────────────────────────────────────────────────────────────────
+ wrote C:\Development\Studio\InversionGap\results\azure\Q2-qwen-vs-global-c32.json

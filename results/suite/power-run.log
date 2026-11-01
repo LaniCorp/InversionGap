@@ -1,0 +1,61 @@
+﻿inversion-gap · resolving edge endpoints…
+  model phi3:latest (format Json) on http://127.0.0.1:11435, http://127.0.0.1:11436
+  cloud: in-process mock gateway, synthetic upstream · profile azure-copilot (WAN 60-110ms, model 150-500ms, quota 4, +900 meta-prompt tok)
+  [  1.0s] cloud   0/1000 (0.00 ops/s)   edge   0/1000 (0.00 ops/s)
+  [  2.0s] cloud   0/1000 (0.00 ops/s)   edge  30/1000 (14.99 ops/s)
+  [  3.0s] cloud   0/1000 (0.00 ops/s)   edge  58/1000 (19.31 ops/s)
+  [  4.0s] cloud   0/1000 (0.00 ops/s)   edge  89/1000 (22.22 ops/s)
+  [  5.0s] cloud   0/1000 (0.00 ops/s)   edge 122/1000 (24.37 ops/s)
+  [  6.0s] cloud   0/1000 (0.00 ops/s)   edge 154/1000 (25.63 ops/s)
+  [  7.0s] cloud   0/1000 (0.00 ops/s)   edge 183/1000 (26.11 ops/s)
+  [  8.0s] cloud   0/1000 (0.00 ops/s)   edge 212/1000 (26.47 ops/s)
+  [  9.0s] cloud   0/1000 (0.00 ops/s)   edge 242/1000 (26.86 ops/s)
+  [ 10.0s] cloud   0/1000 (0.00 ops/s)   edge 274/1000 (27.37 ops/s)
+  [ 11.0s] cloud   0/1000 (0.00 ops/s)   edge 308/1000 (27.97 ops/s)
+  [ 12.0s] cloud   0/1000 (0.00 ops/s)   edge 339/1000 (28.21 ops/s)
+  [ 13.0s] cloud   0/1000 (0.00 ops/s)   edge 371/1000 (28.50 ops/s)
+  [ 14.0s] cloud   0/1000 (0.00 ops/s)   edge 403/1000 (28.75 ops/s)
+  [ 15.0s] cloud   0/1000 (0.00 ops/s)   edge 437/1000 (29.10 ops/s)
+  [ 16.0s] cloud   0/1000 (0.00 ops/s)   edge 471/1000 (29.40 ops/s)
+  [ 17.0s] cloud   0/1000 (0.00 ops/s)   edge 501/1000 (29.43 ops/s)
+  [ 18.0s] cloud   0/1000 (0.00 ops/s)   edge 536/1000 (29.74 ops/s)
+  [ 19.0s] cloud   0/1000 (0.00 ops/s)   edge 569/1000 (29.91 ops/s)
+  [ 20.0s] cloud   0/1000 (0.00 ops/s)   edge 605/1000 (30.21 ops/s)
+  [ 21.0s] cloud   0/1000 (0.00 ops/s)   edge 633/1000 (30.10 ops/s)
+  [ 22.0s] cloud   0/1000 (0.00 ops/s)   edge 667/1000 (30.28 ops/s)
+  [ 23.0s] cloud   0/1000 (0.00 ops/s)   edge 700/1000 (30.40 ops/s)
+  [ 24.0s] cloud   0/1000 (0.00 ops/s)   edge 732/1000 (30.46 ops/s)
+  [ 25.0s] cloud   0/1000 (0.00 ops/s)   edge 763/1000 (30.48 ops/s)
+  [ 26.0s] cloud   0/1000 (0.00 ops/s)   edge 794/1000 (30.50 ops/s)
+  [ 27.0s] cloud   0/1000 (0.00 ops/s)   edge 825/1000 (30.52 ops/s)
+  [ 28.0s] cloud   0/1000 (0.00 ops/s)   edge 858/1000 (30.60 ops/s)
+  [ 29.0s] cloud   0/1000 (0.00 ops/s)   edge 891/1000 (30.68 ops/s)
+  [ 30.0s] cloud   0/1000 (0.00 ops/s)   edge 922/1000 (30.69 ops/s)
+  [ 31.0s] cloud   0/1000 (0.00 ops/s)   edge 954/1000 (30.74 ops/s)
+  [ 32.0s] cloud   0/1000 (0.00 ops/s)   edge 987/1000 (30.80 ops/s)
+  [ 33.0s] cloud   0/1000 (0.00 ops/s)   edge 1000/1000 (31.06 ops/s)
+
+──────────────────────────────────────────────────────────────────────────────
+                                      Cloud/API-Wrapper        Sovereign Edge
+──────────────────────────────────────────────────────────────────────────────
+ Completed / failed                               0 / 0              1000 / 0
+ Wall time                                       0.00 s               32.20 s
+ Throughput                                  0.00 ops/s           31.06 ops/s
+ Latency avg                                       0 ms                1.02 s
+ Latency p50 / p95                          0 ms / 0 ms       984 ms / 1.40 s
+ Network RTT (cum.) / loopback                     0 ms                909 ms
+ Auth overhead (cum.)                    0 ms (0 fetch)                  0 ms
+ Gateway policy + safety (cum.)                    0 ms                  0 ms
+ 429 back-off / local queue (cum.)      0 ms (0 retries)               105.8 s
+ Serde overhead (cum.)                             0 µs              34041 µs
+ Inference (cum.)                                  0 ms               913.0 s
+ Payload off-host                                   0 B                   0 B
+ Tokens in / out                                  0 / 0        192764 / 29056
+ Cost                                           $0.0000                 $0.00
+ Rubric severity exact / ±1                           —             42% / 76%
+ Rubric action exact                                  —                   37%
+──────────────────────────────────────────────────────────────────────────────
+ (no comparison — one side produced no results)
+ Token meter: $0.0000 this run → $0.0000 per 1M events
+──────────────────────────────────────────────────────────────────────────────
+ wrote C:\Development\Studio\InversionGap\results\suite\power-run.json

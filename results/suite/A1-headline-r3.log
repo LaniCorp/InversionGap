@@ -1,0 +1,84 @@
+﻿inversion-gap · resolving edge endpoints…
+  model phi3:latest (format Json) on http://127.0.0.1:11435, http://127.0.0.1:11436
+  warming up model on 2 endpoint(s) (untimed)…
+    http://127.0.0.1:11435: ready in 0.72s
+    http://127.0.0.1:11436: ready in 0.72s
+  cloud: in-process mock gateway, synthetic upstream · profile azure-copilot (WAN 60-110ms, model 150-500ms, quota 4, +900 meta-prompt tok)
+  [  1.0s] cloud   1/100 (1.00 ops/s)   edge  16/100 (15.97 ops/s)
+  [  2.0s] cloud   3/100 (1.50 ops/s)   edge  48/100 (23.95 ops/s)
+  [  3.0s] cloud   6/100 (2.00 ops/s)   edge  80/100 (26.62 ops/s)
+  [  4.0s] cloud   8/100 (2.00 ops/s)   edge 100/100 (28.13 ops/s)
+  [  5.0s] cloud   9/100 (1.80 ops/s)   edge 100/100 (28.13 ops/s)
+  [  6.0s] cloud  11/100 (1.83 ops/s)   edge 100/100 (28.13 ops/s)
+  [  7.0s] cloud  13/100 (1.85 ops/s)   edge 100/100 (28.13 ops/s)
+  [  8.0s] cloud  15/100 (1.87 ops/s)   edge 100/100 (28.13 ops/s)
+  [  9.0s] cloud  17/100 (1.89 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 10.0s] cloud  19/100 (1.90 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 11.0s] cloud  21/100 (1.91 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 12.0s] cloud  23/100 (1.91 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 13.0s] cloud  25/100 (1.92 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 14.0s] cloud  27/100 (1.93 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 15.0s] cloud  29/100 (1.93 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 16.0s] cloud  31/100 (1.93 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 17.0s] cloud  33/100 (1.94 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 18.0s] cloud  34/100 (1.89 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 19.0s] cloud  36/100 (1.89 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 20.0s] cloud  38/100 (1.90 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 21.0s] cloud  41/100 (1.95 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 22.0s] cloud  42/100 (1.91 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 23.0s] cloud  44/100 (1.91 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 24.0s] cloud  46/100 (1.91 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 25.0s] cloud  48/100 (1.92 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 26.0s] cloud  50/100 (1.92 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 27.0s] cloud  52/100 (1.92 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 28.0s] cloud  54/100 (1.93 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 29.0s] cloud  55/100 (1.89 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 30.0s] cloud  58/100 (1.93 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 31.0s] cloud  60/100 (1.93 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 32.0s] cloud  62/100 (1.93 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 33.0s] cloud  64/100 (1.94 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 34.0s] cloud  65/100 (1.91 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 35.0s] cloud  68/100 (1.94 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 36.0s] cloud  69/100 (1.91 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 37.1s] cloud  71/100 (1.92 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 38.1s] cloud  73/100 (1.92 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 39.1s] cloud  75/100 (1.92 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 40.1s] cloud  77/100 (1.92 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 41.1s] cloud  79/100 (1.92 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 42.1s] cloud  81/100 (1.93 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 43.1s] cloud  83/100 (1.93 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 44.1s] cloud  85/100 (1.93 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 45.1s] cloud  88/100 (1.95 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 46.1s] cloud  90/100 (1.95 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 47.1s] cloud  92/100 (1.95 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 48.1s] cloud  94/100 (1.96 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 49.1s] cloud  95/100 (1.94 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 50.1s] cloud  97/100 (1.94 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 51.1s] cloud  99/100 (1.94 ops/s)   edge 100/100 (28.13 ops/s)
+  [ 52.1s] cloud 100/100 (1.95 ops/s)   edge 100/100 (28.13 ops/s)
+
+──────────────────────────────────────────────────────────────────────────────
+                                      Cloud/API-Wrapper        Sovereign Edge
+──────────────────────────────────────────────────────────────────────────────
+ Completed / failed                             100 / 0               100 / 0
+ Wall time                                      51.22 s                3.56 s
+ Throughput                                  1.95 ops/s           28.13 ops/s
+ Latency avg                                     512 ms                1.01 s
+ Latency p50 / p95                      501 ms / 691 ms       1.02 s / 1.48 s
+ Network RTT (cum.) / loopback                   8.58 s                201 ms
+ Auth overhead (cum.)                  1.80 s (1 fetch)                  0 ms
+ Gateway policy + safety (cum.)                  9.82 s                  0 ms
+ 429 back-off / local queue (cum.)      0 ms (0 retries)                20.2 s
+ Serde overhead (cum.)                         10964 µs               2455 µs
+ Inference (cum.)                                30.7 s                80.5 s
+ Payload off-host                              180.5 KB                   0 B
+ Tokens in / out                          100435 / 2125          19145 / 2963
+ Cost                                           $0.2723                 $0.00
+ Rubric severity exact / ±1                 100% / 100%             37% / 75%
+ Rubric action exact                               100%                   30%
+──────────────────────────────────────────────────────────────────────────────
+ ⚡ Edge is 14.4x Faster & 100% Sovereign
+ Latency multiple: 0.5x   Orchestration tax: 40% of each cloud call (205 ms non-inference)
+ Token meter: $0.2723 this run → $2723 per 1M events
+──────────────────────────────────────────────────────────────────────────────
+ wrote C:\Development\Studio\InversionGap\results\suite\A1-headline-r3.json

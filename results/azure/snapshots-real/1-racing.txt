@@ -1,0 +1,50 @@
+╭────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                             THE ORCHESTRATION TAX · Complexity Inversion Gap benchmark                                             │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭ ☁  Cloud/API-Wrapper Harness ───────────────────────────────────────────╮╭ ⚡  Sovereign Edge Actor (Lani-style) ───────────────────────────────────╮
+│█                          1/60  running  1.3s                           ││██████████████████████████23/60  running  1.3s                           │
+│ Throughput                    0.80 ops/sec                              ││ Throughput                    18.32 ops/sec                             │
+│ Latency avg / p50 / p95       802 ms / 802 ms / 802 ms                  ││ Latency avg / p50 / p95       992 ms / 892 ms / 1.25 s                  │
+│ Cumulative network RTT        294 ms                                    ││ Local loopback/IPC latency    122 ms                                    │
+│ Auth overhead (OAuth + JWT)   0 ms  (0 token fetch)                     ││ Auth overhead                 0 ms — no token, no gateway               │
+│ Gateway / service overhead    335 ms                                    ││ Gateway / routing hops        0                                         │
+│ Throttle back-off (429s)      0 ms  (0 retries)                         ││ Local queue (GPU saturation)  10.9 s  (2 GPU actors)                    │
+│ Serialisation/deser overhead  70 µs                                     ││ Serialisation/deser overhead  359 µs (in-memory)                        │
+│ Upstream inference            173 ms                                    ││ Local GPU inference           11.8 s                                    │
+│ Payload off-host ↑ / ↓        601 B / 1.6 KB                            ││ Payload off-host              0 B                                       │
+│ Tokens metered in / out       142 / 23                                  ││ Tokens processed in / out     4421 / 650                                │
+│ Token Meter cost              $0.0001                                   ││ Local resource cost           $0.00 (flat)                              │
+│                                                                         ││                                                                         │
+│ per-task latency →                                                      ││ per-task latency →                                                      │
+│█                                                                        ││           ▁▁▁▁▆▆▇▇▇█▇█                                                  │
+│█                                                                        ││███████████████████████                                                  │
+│█                                                                        ││███████████████████████                                                  │
+│ #1   high     escalate remote_service_creation 802 ms                   ││ #23  medium   monitor  dns_query               1.25 s                   │
+│                                                                         ││ #31  medium   block    ssh_attempts            1.24 s                   │
+│                                                                         ││ #19  low      monitor  powershell_activity     1.25 s                   │
+│                                                                         ││ #22  medium   monitor  remote_service_creation 1.21 s                   │
+│                                                                         ││ #32  medium   monitor  sign-in-anomaly         1.21 s                   │
+│                                                                         ││ #20  critical block    api_restart_failure     1.21 s                   │
+│                                                                         ││ #28  critical block    setuid_binary_change    1.19 s                   │
+│                                                                         ││ #4   medium   monitor  remote_service_creation 1.19 s                   │
+│                                                                         ││ #26  medium   monitor  disk_usage              892 ms                   │
+│                                                                         ││ #12  medium   monitor  dns_query               895 ms                   │
+│                                                                         ││ #6   medium   escalate uid_change              896 ms                   │
+│                                                                         ││ #10  critical block    ransomware              894 ms                   │
+│                                                                         ││                                                                         │
+│                                                                         ││                                                                         │
+│                                                                         ││                                                                         │
+│                                                                         ││                                                                         │
+│                                                                         ││                                                                         │
+╰─────────────────────────────────────────────────────────────────────────╯╰─────────────────────────────────────────────────────────────────────────╯
+╔ ◆ The Complexity Inversion Gap ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                      ⚡  Edge is 23.0x Faster & 100% Sovereign                                                      ║
+║                                                                                                                                                    ║
+║ Cloud ops/s     0.80 █████                                                                                                                         ║
+║ Edge ops/s     18.32 ██████████████████████████████████████████████████████████████████████████████████████████████████████████████████            ║
+║ Latency multiple   cloud avg 802 ms vs edge avg 992 ms  →  0.8x                                                                                    ║
+║ Orchestration tax  78% of every cloud call is not inference (net 294 ms · auth 0 ms · policy+safety 335 ms · back-off 0 ms per call)               ║
+║ Token meter        $0.0001 this run → $103 per 1M events   edge: $0.00                                                                             ║
+║ Data egress        601 B left the trust boundary (cloud)   edge: 100% sovereign                                                                    ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+ running — q to abort   cloud: real endpoint https://aoai-inversiongap-xxxxx.openai.azure.com/openai/deployments/gpt-41-mini/chat/completions?api-vers

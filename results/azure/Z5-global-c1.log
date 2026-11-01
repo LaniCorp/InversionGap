@@ -1,0 +1,93 @@
+﻿inversion-gap · resolving edge endpoints…
+  model phi3:latest (format Json) on http://127.0.0.1:11435, http://127.0.0.1:11436
+  warming up model on 2 endpoint(s) (untimed)…
+    http://127.0.0.1:11435: ready in 0.58s
+    http://127.0.0.1:11436: ready in 0.48s
+  cloud: real endpoint https://aoai-inversiongap-xxxxx.openai.azure.com/openai/deployments/gpt-41-mini-global/chat/completions?api-version=2024-10-21 (model gpt-41-mini-global, auth ApiKey)
+  [  1.0s] cloud   1/100 (1.00 ops/s)   edge  12/100 (12.00 ops/s)
+  [  2.0s] cloud   3/100 (1.50 ops/s)   edge  39/100 (19.48 ops/s)
+  [  3.0s] cloud   5/100 (1.66 ops/s)   edge  65/100 (21.60 ops/s)
+  [  4.0s] cloud   7/100 (1.74 ops/s)   edge 100/100 (25.75 ops/s)
+  [  5.0s] cloud   8/100 (1.59 ops/s)   edge 100/100 (25.75 ops/s)
+  [  6.0s] cloud  10/100 (1.66 ops/s)   edge 100/100 (25.75 ops/s)
+  [  7.0s] cloud  12/100 (1.71 ops/s)   edge 100/100 (25.75 ops/s)
+  [  8.0s] cloud  13/100 (1.62 ops/s)   edge 100/100 (25.75 ops/s)
+  [  9.0s] cloud  15/100 (1.66 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 10.1s] cloud  17/100 (1.69 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 11.1s] cloud  18/100 (1.63 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 12.1s] cloud  20/100 (1.66 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 13.1s] cloud  22/100 (1.68 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 14.1s] cloud  23/100 (1.63 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 15.1s] cloud  25/100 (1.66 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 16.1s] cloud  27/100 (1.68 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 17.1s] cloud  28/100 (1.64 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 18.1s] cloud  30/100 (1.66 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 19.1s] cloud  32/100 (1.67 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 20.1s] cloud  34/100 (1.69 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 21.1s] cloud  35/100 (1.65 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 22.2s] cloud  37/100 (1.67 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 23.2s] cloud  39/100 (1.68 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 24.2s] cloud  41/100 (1.70 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 25.2s] cloud  42/100 (1.67 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 26.2s] cloud  44/100 (1.68 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 27.2s] cloud  45/100 (1.65 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 28.2s] cloud  47/100 (1.67 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 29.2s] cloud  49/100 (1.68 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 30.2s] cloud  51/100 (1.69 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 31.2s] cloud  52/100 (1.67 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 32.2s] cloud  53/100 (1.64 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 33.2s] cloud  55/100 (1.65 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 34.2s] cloud  57/100 (1.66 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 35.2s] cloud  58/100 (1.65 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 36.2s] cloud  60/100 (1.66 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 37.3s] cloud  62/100 (1.66 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 38.3s] cloud  63/100 (1.65 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 39.3s] cloud  65/100 (1.66 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 40.3s] cloud  67/100 (1.66 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 41.3s] cloud  68/100 (1.65 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 42.3s] cloud  70/100 (1.66 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 43.3s] cloud  71/100 (1.64 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 44.3s] cloud  73/100 (1.65 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 45.3s] cloud  74/100 (1.63 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 46.3s] cloud  76/100 (1.64 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 47.3s] cloud  77/100 (1.63 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 48.3s] cloud  79/100 (1.63 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 49.3s] cloud  81/100 (1.64 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 50.4s] cloud  83/100 (1.65 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 51.4s] cloud  84/100 (1.64 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 52.4s] cloud  86/100 (1.64 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 53.4s] cloud  88/100 (1.65 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 54.4s] cloud  89/100 (1.64 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 55.4s] cloud  91/100 (1.64 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 56.4s] cloud  93/100 (1.65 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 57.4s] cloud  94/100 (1.64 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 58.4s] cloud  96/100 (1.64 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 59.4s] cloud  97/100 (1.63 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 60.5s] cloud  99/100 (1.64 ops/s)   edge 100/100 (25.75 ops/s)
+  [ 61.5s] cloud 100/100 (1.65 ops/s)   edge 100/100 (25.75 ops/s)
+
+──────────────────────────────────────────────────────────────────────────────
+                                      Cloud/API-Wrapper        Sovereign Edge
+──────────────────────────────────────────────────────────────────────────────
+ Completed / failed                             100 / 0               100 / 0
+ Wall time                                      60.64 s                3.88 s
+ Throughput                                  1.65 ops/s           25.75 ops/s
+ Latency avg                                     606 ms                1.12 s
+ Latency p50 / p95                      572 ms / 826 ms       1.10 s / 1.64 s
+ Network RTT (cum.) / loopback                   18.6 s                230 ms
+ Auth overhead (cum.)                    0 ms (0 fetch)                  0 ms
+ Gateway / service overhead (cum.)                24.6 s                  0 ms
+ 429 back-off / local queue (cum.)      0 ms (0 retries)                19.8 s
+ Serde overhead (cum.)                          3907 µs               2994 µs
+ Inference (cum.)                                17.4 s                92.3 s
+ Payload off-host                               58.8 KB                   0 B
+ Tokens in / out                           14076 / 2335          18845 / 3031
+ Cost                                           $0.0094                 $0.00
+ Rubric severity exact / ±1                  66% / 100%             35% / 72%
+ Rubric action exact                                53%                   31%
+──────────────────────────────────────────────────────────────────────────────
+ ⚡ Edge is 15.6x Faster & 100% Sovereign
+ Latency multiple: 0.5x   Orchestration tax: 71% of each cloud call (433 ms non-inference)
+ Token meter: $0.0094 this run → $93.66 per 1M events
+──────────────────────────────────────────────────────────────────────────────
+ wrote C:\Development\Studio\InversionGap\results\azure\Z5-global-c1.json

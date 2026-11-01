@@ -1,0 +1,49 @@
+﻿inversion-gap agent · arms D
+  edge model phi4:latest on http://127.0.0.1:11435, http://127.0.0.1:11436
+    http://127.0.0.1:11435: ready in 0.29s
+    http://127.0.0.1:11436: ready in 0.36s
+  cloud model: gpt-41-mini-global via aoai-inversiongap-xxxxx.openai.azure.com
+  [   1.0s] D   0/100 (0.00/s)
+  [   2.0s] D   0/100 (0.00/s)
+  [   3.0s] D   1/100 (0.33/s)
+  [   4.0s] D  18/100 (4.49/s)
+  [   5.0s] D  32/100 (6.39/s)
+  [   6.0s] D  32/100 (5.33/s)
+  [   7.0s] D  34/100 (4.85/s)
+  [   8.0s] D  45/100 (5.62/s)
+  [   9.0s] D  62/100 (6.88/s)
+  [  10.0s] D  65/100 (6.49/s)
+  [  11.0s] D  66/100 (5.99/s)
+  [  12.0s] D  75/100 (6.24/s)
+  [  13.0s] D  93/100 (7.14/s)
+  [  14.0s] D 100/100 (7.22/s)
+
+──────────────────────────────────────────
+ Compound loop (4 steps)             Arm D
+──────────────────────────────────────────
+ Completed / failed                100 / 0
+ Throughput                      7.22 ev/s
+ Event latency avg                  3.99 s
+ Event latency p95                  4.81 s
+ Orchestration / event               72 ms
+   network / event                   34 ms
+   service+gw / event                37 ms
+   auth / event                       0 ms
+   429 back-off / event               0 ms
+ Model compute / event              3.72 s
+ Tool exec / event                0.020 ms
+ GPU contention / event             194 ms
+ Cross-boundary calls          0.1 / event
+ Metered cost                      $0.0022
+ $ per 1M events                    $21.68
+ Bytes off-host                    16.5 KB
+ Events off-host                       15%
+ Escalated (D)                    15 (15%)
+ Rubric sev exact / ±1           54% / 99%
+ Rubric action exact                   49%
+──────────────────────────────────────────
+ Payback of owned GPUs ($4000) at 100000 events/day, net of $2.00/1M events local energy:
+ A: simulated runtime hops (azure-copilot: WAN 60-110ms, JWT 8-20ms, policy 15-45ms, safety 40-90ms on model steps)
+ Cloud model for A/B/D: gpt-41-mini-global via aoai-inversiongap-xxxxx.openai.azure.com
+──────────────────────────────────────────
+ wrote results\agent\R3-hybrid-confidence-only.json

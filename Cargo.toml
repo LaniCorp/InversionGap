@@ -1,0 +1,23 @@
+[package]
+name = "inversion-gap"
+version = "0.1.0"
+edition = "2024"
+description = "Benchmark of the Orchestration Tax: cloud-wrapped LLM calls and agent loops vs a local GPU edge"
+repository = "https://github.com/LaniCorp/InversionGap"
+readme = "README.md"
+license = "MIT"
+
+[dependencies]
+anyhow = "1.0.104"
+axum = "0.8.9"
+base64 = "0.23.1"
+bytes = "1.12.1"
+chrono = { version = "0.4.45", features = ["serde"] }
+clap = { version = "4.6.7", features = ["derive", "env"] }
+futures = "0.3.34"
+ratatui = "0.30.2"
+reqwest = { version = "0.13.5", features = ["charset", "form", "http2", "json", "native-tls"], default-features = false }
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+tokio = { version = "1.54.1", features = ["full"] }
+tokio-stream = "0.1.19"

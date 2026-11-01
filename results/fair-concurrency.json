@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "cloud": "in-process mock gateway, synthetic upstream · profile azure-copilot (WAN 60-110ms, model 150-500ms, quota 4, +900 meta-prompt tok)",
+    "cloud_concurrency": 32,
+    "edge_concurrency": 32,
+    "edge_endpoints": [
+      "http://127.0.0.1:11435",
+      "http://127.0.0.1:11436"
+    ],
+    "edge_format": "Json",
+    "edge_model": "phi3:latest",
+    "events": 50,
+    "price_in_per_m": 2.5,
+    "price_out_per_m": 10.0,
+    "profile": {
+      "inference": {
+        "hi": 500,
+        "lo": 150
+      },
+      "jwt_validate": {
+        "hi": 20,
+        "lo": 8
+      },
+      "max_inflight": 4,
+      "meta_prompt_tokens": 900,
+      "name": "azure-copilot",
+      "policy": {
+        "hi": 45,
+        "lo": 15
+      },
+      "retry_after_ms": 300,
+      "safety": {
+        "hi": 90,
+        "lo": 40
+      },
+      "token_issue": {
+        "hi": 220,
+        "lo": 120
+      },
+      "token_ttl_s": 3600,
+      "wan_rtt": {
+        "hi": 110,
+        "lo": 60
+      }
+    },
+    "seed": 42,
+    "sovereign_pct": 100.0,
+    "timestamp": "2026-11-01T11:10:25.634055800+00:00"
+  },
+  "cloud": {
+    "label": "cloud",
+    "total": 50,
+    "completed": 33,
+    "failed": 17,
+    "started": true,
+    "done": true,
+    "elapsed_s": 5.1606036,
+    "throughput_ops": 6.394600817625287,
+    "avg_ms": 2345.2137520000006,
+    "p50_ms": 2757.5425999999998,
+    "p95_ms": 3699.1094000000003,
+    "network_ms": 24234.6383,
+    "auth_ms": 8169.542300000003,
+    "gateway_ms": 3178.86,
+    "queue_ms": 69600.0,
+    "inference_ms": 11018.250000000002,
+    "serde_us": 4556.299999999999,
+    "bytes_tx": 521098,
+    "bytes_rx": 45884,
+    "retries": 232,
+    "token_fetches": 1,
+    "tokens_in": 33145,
+    "tokens_out": 702,
+    "cost_usd": 0.08988250000000002
+  },
+  "edge": {
+    "label": "edge",
+    "total": 50,
+    "completed": 50,
+    "failed": 0,
+    "started": true,
+    "done": true,
+    "elapsed_s": 2.0627849,
+    "throughput_ops": 24.23907601805695,
+    "avg_ms": 1025.244632,
+    "p50_ms": 1062.4257,
+    "p95_ms": 1348.5404,
+    "network_ms": 221.6636000000011,
+    "auth_ms": 0.0,
+    "gateway_ms": 0.0,
+    "queue_ms": 12921.306002999998,
+    "inference_ms": 38119.261997,
+    "serde_us": 1023.6000000000001,
+    "bytes_tx": 32062,
+    "bytes_rx": 21332,
+    "retries": 0,
+    "token_fetches": 0,
+    "tokens_in": 9542,
+    "tokens_out": 1469,
+    "cost_usd": 0.0
+  },
+  "gap": {
+    "throughput_x": 3.7905534230138893,
+    "latency_x": 2.287467477323013,
+    "tax_pct": 90.60362835532273,
+    "tax_ms_per_call": 2124.8487520000003,
+    "cloud_cost_usd": 0.08988250000000002,
+    "cloud_cost_per_million": 2723.7121212121215,
+    "cloud_egress_bytes": 521098
+  }
+}

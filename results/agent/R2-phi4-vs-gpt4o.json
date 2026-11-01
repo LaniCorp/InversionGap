@@ -1,0 +1,5605 @@
+{
+  "arms": [
+    {
+      "arm": "A",
+      "summary": {
+        "auth_ms": 7900.233899999998,
+        "avg_ms": 4120.893783000001,
+        "boundary_calls": 400,
+        "bytes_off_host": 427162,
+        "bytes_rx": 175138,
+        "bytes_tx": 427162,
+        "completed": 100,
+        "contention_ms": 0.0,
+        "cost_usd": 0.1779975,
+        "done": true,
+        "elapsed_s": 53.3917314,
+        "escalations": 0,
+        "events_off_host": 100,
+        "failed": 0,
+        "gateway_ms": 313791.6500000003,
+        "inference_ms": 55218.0,
+        "label": "A",
+        "local_tokens": 0,
+        "model_calls": 200,
+        "network_ms": 34035.24919999999,
+        "orch_ms": 355727.13310000004,
+        "p50_ms": 3920.0583,
+        "p95_ms": 6098.1899,
+        "queue_ms": 0.0,
+        "retries": 0,
+        "rubric_action_exact": 47,
+        "rubric_graded": 100,
+        "rubric_severity_exact": 41,
+        "rubric_severity_within_one": 99,
+        "serde_us": 21849.300000000007,
+        "started": true,
+        "throughput_ops": 1.8729491885329645,
+        "token_fetches": 1,
+        "tokens_in": 37995,
+        "tokens_out": 8301,
+        "tool_calls": 200,
+        "tool_ms": 2.318999999999998,
+        "total": 100
+      },
+      "title": "A · Cloud-hosted agent",
+      "verdicts": [
+        {
+          "error": null,
+          "event_id": 1,
+          "expected": {
+            "action": "escalate",
+            "category": "lateral_movement",
+            "confidence": 0.8999999761581421,
+            "severity": "critical"
+          },
+          "kind": "lateral_movement",
+          "latency_ms": 5622.650000000001,
+          "verdict": {
+            "action": "monitor",
+            "category": "suspicious_remote_service_creation",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 2,
+          "expected": {
+            "action": "ignore",
+            "category": "benign_auth",
+            "confidence": 0.9599999785423279,
+            "severity": "low"
+          },
+          "kind": "benign_login",
+          "latency_ms": 3485.8716,
+          "verdict": {
+            "action": "monitor",
+            "category": "privileged_access",
+            "confidence": 0.8999999761581421,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 3,
+          "expected": {
+            "action": "block",
+            "category": "malware",
+            "confidence": 0.9700000286102295,
+            "severity": "critical"
+          },
+          "kind": "malware_hash",
+          "latency_ms": 5026.846100000001,
+          "verdict": {
+            "action": "block",
+            "category": "ransomware_detection",
+            "confidence": 0.9800000190734863,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 4,
+          "expected": {
+            "action": "escalate",
+            "category": "lateral_movement",
+            "confidence": 0.8999999761581421,
+            "severity": "critical"
+          },
+          "kind": "lateral_movement",
+          "latency_ms": 6216.1465,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_remote_service_creation",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 5,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 4783.270100000001,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_login_activity",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 6,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 4286.0595,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 7,
+          "expected": {
+            "action": "monitor",
+            "category": "reconnaissance",
+            "confidence": 0.8100000023841858,
+            "severity": "medium"
+          },
+          "kind": "port_scan",
+          "latency_ms": 5488.7323,
+          "verdict": {
+            "action": "monitor",
+            "category": "port_scanning",
+            "confidence": 0.8500000238418579,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 8,
+          "expected": {
+            "action": "monitor",
+            "category": "certificate_hygiene",
+            "confidence": 0.9100000262260437,
+            "severity": "medium"
+          },
+          "kind": "cert_expiry",
+          "latency_ms": 6118.9899,
+          "verdict": {
+            "action": "monitor",
+            "category": "certificate_expiration",
+            "confidence": 0.8999999761581421,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 9,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 3647.6099,
+          "verdict": {
+            "action": "escalate",
+            "category": "executed_encoded_powershell",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 10,
+          "expected": {
+            "action": "block",
+            "category": "malware",
+            "confidence": 0.9700000286102295,
+            "severity": "critical"
+          },
+          "kind": "malware_hash",
+          "latency_ms": 3296.4837,
+          "verdict": {
+            "action": "block",
+            "category": "ransomware_detection",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 11,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 6690.4592,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 12,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 4176.619299999999,
+          "verdict": {
+            "action": "monitor",
+            "category": "dns_exfiltration_detected",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 13,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 5218.9194,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 14,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 6098.1899,
+          "verdict": {
+            "action": "monitor",
+            "category": "suspicious_login_activity",
+            "confidence": 0.8500000238418579,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 15,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 6009.119100000001,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 16,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 5188.3653,
+          "verdict": {
+            "action": "monitor",
+            "category": "unusual_login_behavior",
+            "confidence": 0.800000011920929,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 17,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 5274.754,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_powershell_execution",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 18,
+          "expected": {
+            "action": "monitor",
+            "category": "certificate_hygiene",
+            "confidence": 0.9100000262260437,
+            "severity": "medium"
+          },
+          "kind": "cert_expiry",
+          "latency_ms": 3301.2769,
+          "verdict": {
+            "action": "monitor",
+            "category": "certificate_expiration",
+            "confidence": 0.8999999761581421,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 19,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 3241.8140000000003,
+          "verdict": {
+            "action": "escalate",
+            "category": "malicious_powershell_execution",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 20,
+          "expected": {
+            "action": "escalate",
+            "category": "availability",
+            "confidence": 0.8899999856948853,
+            "severity": "high"
+          },
+          "kind": "service_crash_loop",
+          "latency_ms": 3887.4914,
+          "verdict": {
+            "action": "escalate",
+            "category": "service_instability",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 21,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 3747.6154,
+          "verdict": {
+            "action": "monitor",
+            "category": "geo_anomaly_suspicious_signin",
+            "confidence": 0.8500000238418579,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 22,
+          "expected": {
+            "action": "escalate",
+            "category": "lateral_movement",
+            "confidence": 0.8999999761581421,
+            "severity": "critical"
+          },
+          "kind": "lateral_movement",
+          "latency_ms": 3822.6908000000003,
+          "verdict": {
+            "action": "monitor",
+            "category": "remote_service_creation",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 23,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 3519.0492,
+          "verdict": {
+            "action": "block",
+            "category": "dns_exfiltration_attempt",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 24,
+          "expected": {
+            "action": "escalate",
+            "category": "availability",
+            "confidence": 0.8899999856948853,
+            "severity": "high"
+          },
+          "kind": "service_crash_loop",
+          "latency_ms": 2473.7518,
+          "verdict": {
+            "action": "monitor",
+            "category": "service_restarts",
+            "confidence": 0.8500000238418579,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 25,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 3215.5187,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation_attempt",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 26,
+          "expected": {
+            "action": "monitor",
+            "category": "capacity",
+            "confidence": 0.8600000143051147,
+            "severity": "medium"
+          },
+          "kind": "disk_pressure",
+          "latency_ms": 2911.1831,
+          "verdict": {
+            "action": "monitor",
+            "category": "disk_usage_alert",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 27,
+          "expected": {
+            "action": "ignore",
+            "category": "benign_auth",
+            "confidence": 0.9599999785423279,
+            "severity": "low"
+          },
+          "kind": "benign_login",
+          "latency_ms": 4636.9182,
+          "verdict": {
+            "action": "ignore",
+            "category": "user_sign_in",
+            "confidence": 0.949999988079071,
+            "severity": "low"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 28,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 3408.9834,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 29,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 4621.4175,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_dns_activity",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 30,
+          "expected": {
+            "action": "block",
+            "category": "brute_force",
+            "confidence": 0.9300000071525574,
+            "severity": "high"
+          },
+          "kind": "brute_force",
+          "latency_ms": 3285.144,
+          "verdict": {
+            "action": "escalate",
+            "category": "bruteforce_login_detected",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 31,
+          "expected": {
+            "action": "block",
+            "category": "brute_force",
+            "confidence": 0.9300000071525574,
+            "severity": "high"
+          },
+          "kind": "brute_force",
+          "latency_ms": 3368.6528,
+          "verdict": {
+            "action": "escalate",
+            "category": "brute_force_login",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 32,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 3971.3836,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_login_activity",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 33,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 5244.2258,
+          "verdict": {
+            "action": "escalate",
+            "category": "dns_tunneling_suspicion",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 34,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 3319.3263,
+          "verdict": {
+            "action": "monitor",
+            "category": "dns_txt_anomaly",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 35,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 3604.1042,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 36,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 3281.8504000000003,
+          "verdict": {
+            "action": "escalate",
+            "category": "impossible_travel",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 37,
+          "expected": {
+            "action": "escalate",
+            "category": "availability",
+            "confidence": 0.8899999856948853,
+            "severity": "high"
+          },
+          "kind": "service_crash_loop",
+          "latency_ms": 4580.1358,
+          "verdict": {
+            "action": "monitor",
+            "category": "service_instability",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 38,
+          "expected": {
+            "action": "ignore",
+            "category": "benign_auth",
+            "confidence": 0.9599999785423279,
+            "severity": "low"
+          },
+          "kind": "benign_login",
+          "latency_ms": 4133.404600000001,
+          "verdict": {
+            "action": "monitor",
+            "category": "privileged_user_access",
+            "confidence": 0.8999999761581421,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 39,
+          "expected": {
+            "action": "monitor",
+            "category": "reconnaissance",
+            "confidence": 0.8100000023841858,
+            "severity": "medium"
+          },
+          "kind": "port_scan",
+          "latency_ms": 4704.4188,
+          "verdict": {
+            "action": "escalate",
+            "category": "network_scan_detected",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 40,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 3058.9233999999997,
+          "verdict": {
+            "action": "escalate",
+            "category": "unauthorized_uid_change",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 41,
+          "expected": {
+            "action": "escalate",
+            "category": "lateral_movement",
+            "confidence": 0.8999999761581421,
+            "severity": "critical"
+          },
+          "kind": "lateral_movement",
+          "latency_ms": 2999.6283999999996,
+          "verdict": {
+            "action": "escalate",
+            "category": "potential_lateral_movement",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 42,
+          "expected": {
+            "action": "monitor",
+            "category": "certificate_hygiene",
+            "confidence": 0.9100000262260437,
+            "severity": "medium"
+          },
+          "kind": "cert_expiry",
+          "latency_ms": 3443.8224,
+          "verdict": {
+            "action": "monitor",
+            "category": "certificate_expiration",
+            "confidence": 0.8999999761581421,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 43,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 3650.5876000000003,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_login_activity",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 44,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 4728.5755,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_sign_in",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 45,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 4112.3184,
+          "verdict": {
+            "action": "escalate",
+            "category": "obfuscated_powershell_execution",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 46,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 2665.1512,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_dns_activity",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 47,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 5383.6305,
+          "verdict": {
+            "action": "escalate",
+            "category": "dns_anomalous_activity",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 48,
+          "expected": {
+            "action": "monitor",
+            "category": "capacity",
+            "confidence": 0.8600000143051147,
+            "severity": "medium"
+          },
+          "kind": "disk_pressure",
+          "latency_ms": 4101.8444,
+          "verdict": {
+            "action": "monitor",
+            "category": "disk_usage_alert",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 49,
+          "expected": {
+            "action": "monitor",
+            "category": "certificate_hygiene",
+            "confidence": 0.9100000262260437,
+            "severity": "medium"
+          },
+          "kind": "cert_expiry",
+          "latency_ms": 3866.3593,
+          "verdict": {
+            "action": "monitor",
+            "category": "tls_certificate_expiry",
+            "confidence": 0.8999999761581421,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 50,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 3961.4821,
+          "verdict": {
+            "action": "monitor",
+            "category": "anomalous_user_activity",
+            "confidence": 0.75,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 51,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 3565.5325,
+          "verdict": {
+            "action": "monitor",
+            "category": "impossible_travel_event",
+            "confidence": 0.8500000238418579,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 52,
+          "expected": {
+            "action": "escalate",
+            "category": "availability",
+            "confidence": 0.8899999856948853,
+            "severity": "high"
+          },
+          "kind": "service_crash_loop",
+          "latency_ms": 4712.0094,
+          "verdict": {
+            "action": "monitor",
+            "category": "app_crash_loop",
+            "confidence": 0.8500000238418579,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 53,
+          "expected": {
+            "action": "block",
+            "category": "brute_force",
+            "confidence": 0.9300000071525574,
+            "severity": "high"
+          },
+          "kind": "brute_force",
+          "latency_ms": 2458.1979,
+          "verdict": {
+            "action": "escalate",
+            "category": "brute_force_attack",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 54,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 1915.1899,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_powershell_execution",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 55,
+          "expected": {
+            "action": "monitor",
+            "category": "reconnaissance",
+            "confidence": 0.8100000023841858,
+            "severity": "medium"
+          },
+          "kind": "port_scan",
+          "latency_ms": 2598.3534,
+          "verdict": {
+            "action": "escalate",
+            "category": "potential_network_scan",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 56,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 2999.2665,
+          "verdict": {
+            "action": "monitor",
+            "category": "suspicious_dns_activity",
+            "confidence": 0.8500000238418579,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 57,
+          "expected": {
+            "action": "escalate",
+            "category": "lateral_movement",
+            "confidence": 0.8999999761581421,
+            "severity": "critical"
+          },
+          "kind": "lateral_movement",
+          "latency_ms": 3606.8952,
+          "verdict": {
+            "action": "escalate",
+            "category": "remote_service_creation",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 58,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 3920.0583,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation_attempt",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 59,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 4509.4835,
+          "verdict": {
+            "action": "monitor",
+            "category": "suspicious_authentication",
+            "confidence": 0.8500000238418579,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 60,
+          "expected": {
+            "action": "block",
+            "category": "brute_force",
+            "confidence": 0.9300000071525574,
+            "severity": "high"
+          },
+          "kind": "brute_force",
+          "latency_ms": 4267.273,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_ssh_activity",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 61,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 3376.1413000000002,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 62,
+          "expected": {
+            "action": "escalate",
+            "category": "lateral_movement",
+            "confidence": 0.8999999761581421,
+            "severity": "critical"
+          },
+          "kind": "lateral_movement",
+          "latency_ms": 5174.359,
+          "verdict": {
+            "action": "escalate",
+            "category": "remote_service_creation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 63,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 4194.126,
+          "verdict": {
+            "action": "escalate",
+            "category": "malicious_powershell_execution",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 64,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 4721.4979,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 65,
+          "expected": {
+            "action": "monitor",
+            "category": "capacity",
+            "confidence": 0.8600000143051147,
+            "severity": "medium"
+          },
+          "kind": "disk_pressure",
+          "latency_ms": 5682.8477,
+          "verdict": {
+            "action": "monitor",
+            "category": "disk_usage_alert",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 66,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 2855.96,
+          "verdict": {
+            "action": "escalate",
+            "category": "dns_exfiltration_attempt",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 67,
+          "expected": {
+            "action": "block",
+            "category": "malware",
+            "confidence": 0.9700000286102295,
+            "severity": "critical"
+          },
+          "kind": "malware_hash",
+          "latency_ms": 5269.8859999999995,
+          "verdict": {
+            "action": "escalate",
+            "category": "ransomware_detection",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 68,
+          "expected": {
+            "action": "block",
+            "category": "malware",
+            "confidence": 0.9700000286102295,
+            "severity": "critical"
+          },
+          "kind": "malware_hash",
+          "latency_ms": 3795.5259,
+          "verdict": {
+            "action": "escalate",
+            "category": "ransomware_detection",
+            "confidence": 0.9800000190734863,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 69,
+          "expected": {
+            "action": "monitor",
+            "category": "certificate_hygiene",
+            "confidence": 0.9100000262260437,
+            "severity": "medium"
+          },
+          "kind": "cert_expiry",
+          "latency_ms": 3299.915,
+          "verdict": {
+            "action": "monitor",
+            "category": "tls_cert_expiration",
+            "confidence": 0.8999999761581421,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 70,
+          "expected": {
+            "action": "block",
+            "category": "malware",
+            "confidence": 0.9700000286102295,
+            "severity": "critical"
+          },
+          "kind": "malware_hash",
+          "latency_ms": 3970.175,
+          "verdict": {
+            "action": "block",
+            "category": "ransomware_detection",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 71,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 3760.1104,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation_attempt",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 72,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 4157.5829,
+          "verdict": {
+            "action": "monitor",
+            "category": "dns_anomaly",
+            "confidence": 0.8500000238418579,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 73,
+          "expected": {
+            "action": "ignore",
+            "category": "benign_auth",
+            "confidence": 0.9599999785423279,
+            "severity": "low"
+          },
+          "kind": "benign_login",
+          "latency_ms": 3438.9556,
+          "verdict": {
+            "action": "escalate",
+            "category": "privileged_account_access",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 74,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 4478.7168,
+          "verdict": {
+            "action": "monitor",
+            "category": "anomalous_login_activity",
+            "confidence": 0.800000011920929,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 75,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 5494.7753999999995,
+          "verdict": {
+            "action": "escalate",
+            "category": "dns_tunneling_suspected",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 76,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 3410.3871,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_powershell_activity",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 77,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 2898.5883000000003,
+          "verdict": {
+            "action": "monitor",
+            "category": "dns_exfiltration_suspected",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 78,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 3156.1924,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_powershell_execution",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 79,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 5113.5113,
+          "verdict": {
+            "action": "monitor",
+            "category": "suspicious_dns_activity",
+            "confidence": 0.800000011920929,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 80,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 3574.1078,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 81,
+          "expected": {
+            "action": "monitor",
+            "category": "capacity",
+            "confidence": 0.8600000143051147,
+            "severity": "medium"
+          },
+          "kind": "disk_pressure",
+          "latency_ms": 3081.1517,
+          "verdict": {
+            "action": "monitor",
+            "category": "storage_utilization",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 82,
+          "expected": {
+            "action": "escalate",
+            "category": "availability",
+            "confidence": 0.8899999856948853,
+            "severity": "high"
+          },
+          "kind": "service_crash_loop",
+          "latency_ms": 7377.4048,
+          "verdict": {
+            "action": "escalate",
+            "category": "service_restarts",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 83,
+          "expected": {
+            "action": "block",
+            "category": "brute_force",
+            "confidence": 0.9300000071525574,
+            "severity": "high"
+          },
+          "kind": "brute_force",
+          "latency_ms": 3630.7469,
+          "verdict": {
+            "action": "escalate",
+            "category": "brute_force_login",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 84,
+          "expected": {
+            "action": "monitor",
+            "category": "capacity",
+            "confidence": 0.8600000143051147,
+            "severity": "medium"
+          },
+          "kind": "disk_pressure",
+          "latency_ms": 3560.6319,
+          "verdict": {
+            "action": "monitor",
+            "category": "disk_usage",
+            "confidence": 0.8999999761581421,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 85,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 5669.7393,
+          "verdict": {
+            "action": "monitor",
+            "category": "anomalous_authentication",
+            "confidence": 0.800000011920929,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 86,
+          "expected": {
+            "action": "block",
+            "category": "brute_force",
+            "confidence": 0.9300000071525574,
+            "severity": "high"
+          },
+          "kind": "brute_force",
+          "latency_ms": 6244.671600000001,
+          "verdict": {
+            "action": "escalate",
+            "category": "brute_force_attempt",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 87,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 4265.619,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation_attempt",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 88,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 4282.8623,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 89,
+          "expected": {
+            "action": "escalate",
+            "category": "lateral_movement",
+            "confidence": 0.8999999761581421,
+            "severity": "critical"
+          },
+          "kind": "lateral_movement",
+          "latency_ms": 3739.5901999999996,
+          "verdict": {
+            "action": "escalate",
+            "category": "remote_service_creation",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 90,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 2567.4514999999997,
+          "verdict": {
+            "action": "escalate",
+            "category": "uid_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 91,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 2920.2459,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_execution",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 92,
+          "expected": {
+            "action": "block",
+            "category": "brute_force",
+            "confidence": 0.9300000071525574,
+            "severity": "high"
+          },
+          "kind": "brute_force",
+          "latency_ms": 6007.5997,
+          "verdict": {
+            "action": "escalate",
+            "category": "brute_force_attempt",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 93,
+          "expected": {
+            "action": "monitor",
+            "category": "capacity",
+            "confidence": 0.8600000143051147,
+            "severity": "medium"
+          },
+          "kind": "disk_pressure",
+          "latency_ms": 2654.0616999999997,
+          "verdict": {
+            "action": "monitor",
+            "category": "disk_usage_alert",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 94,
+          "expected": {
+            "action": "block",
+            "category": "malware",
+            "confidence": 0.9700000286102295,
+            "severity": "critical"
+          },
+          "kind": "malware_hash",
+          "latency_ms": 3224.521,
+          "verdict": {
+            "action": "escalate",
+            "category": "ransomware_detected",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 95,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 3192.9398,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 96,
+          "expected": {
+            "action": "monitor",
+            "category": "reconnaissance",
+            "confidence": 0.8100000023841858,
+            "severity": "medium"
+          },
+          "kind": "port_scan",
+          "latency_ms": 5799.459900000001,
+          "verdict": {
+            "action": "block",
+            "category": "network_scan",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 97,
+          "expected": {
+            "action": "block",
+            "category": "brute_force",
+            "confidence": 0.9300000071525574,
+            "severity": "high"
+          },
+          "kind": "brute_force",
+          "latency_ms": 4409.4478,
+          "verdict": {
+            "action": "escalate",
+            "category": "brute_force_attack",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 98,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 4492.7028,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation_attempt",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 99,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 3224.8563,
+          "verdict": {
+            "action": "monitor",
+            "category": "suspicious_login",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 100,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 4486.2871000000005,
+          "verdict": {
+            "action": "monitor",
+            "category": "suspicious_login",
+            "confidence": 0.800000011920929,
+            "severity": "medium"
+          }
+        }
+      ]
+    },
+    {
+      "arm": "B",
+      "summary": {
+        "auth_ms": 0.1791000000000001,
+        "avg_ms": 3348.4498269999995,
+        "boundary_calls": 200,
+        "bytes_off_host": 162163,
+        "bytes_rx": 336631,
+        "bytes_tx": 162163,
+        "completed": 100,
+        "contention_ms": 0.0,
+        "cost_usd": 0.177785,
+        "done": true,
+        "elapsed_s": 44.3346489,
+        "escalations": 0,
+        "events_off_host": 100,
+        "failed": 0,
+        "gateway_ms": 246724.0,
+        "inference_ms": 54391.0,
+        "label": "B",
+        "local_tokens": 0,
+        "model_calls": 200,
+        "network_ms": 33717.660699999986,
+        "orch_ms": 280441.8397999999,
+        "p50_ms": 3234.98,
+        "p95_ms": 5153.1162,
+        "queue_ms": 0.0,
+        "retries": 0,
+        "rubric_action_exact": 50,
+        "rubric_graded": 100,
+        "rubric_severity_exact": 40,
+        "rubric_severity_within_one": 98,
+        "serde_us": 6808.2,
+        "started": true,
+        "throughput_ops": 2.2555721649123064,
+        "token_fetches": 0,
+        "tokens_in": 37974,
+        "tokens_out": 8285,
+        "tool_calls": 200,
+        "tool_ms": 1.2885,
+        "total": 100
+      },
+      "title": "B · Sovereign orchestrator + cloud model",
+      "verdicts": [
+        {
+          "error": null,
+          "event_id": 1,
+          "expected": {
+            "action": "escalate",
+            "category": "lateral_movement",
+            "confidence": 0.8999999761581421,
+            "severity": "critical"
+          },
+          "kind": "lateral_movement",
+          "latency_ms": 5376.1721,
+          "verdict": {
+            "action": "escalate",
+            "category": "smb_remote_service_creation",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 2,
+          "expected": {
+            "action": "ignore",
+            "category": "benign_auth",
+            "confidence": 0.9599999785423279,
+            "severity": "low"
+          },
+          "kind": "benign_login",
+          "latency_ms": 3138.6371999999997,
+          "verdict": {
+            "action": "monitor",
+            "category": "user_authentication",
+            "confidence": 0.800000011920929,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 3,
+          "expected": {
+            "action": "block",
+            "category": "malware",
+            "confidence": 0.9700000286102295,
+            "severity": "critical"
+          },
+          "kind": "malware_hash",
+          "latency_ms": 2933.6785999999997,
+          "verdict": {
+            "action": "block",
+            "category": "ransomware_detected",
+            "confidence": 0.9900000095367432,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 4,
+          "expected": {
+            "action": "escalate",
+            "category": "lateral_movement",
+            "confidence": 0.8999999761581421,
+            "severity": "critical"
+          },
+          "kind": "lateral_movement",
+          "latency_ms": 7945.0217,
+          "verdict": {
+            "action": "monitor",
+            "category": "remote_service_smb",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 5,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 4285.5025,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_login_activity",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 6,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 3735.5021,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation_attempt",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 7,
+          "expected": {
+            "action": "monitor",
+            "category": "reconnaissance",
+            "confidence": 0.8100000023841858,
+            "severity": "medium"
+          },
+          "kind": "port_scan",
+          "latency_ms": 3640.5694,
+          "verdict": {
+            "action": "monitor",
+            "category": "network_scan",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 8,
+          "expected": {
+            "action": "monitor",
+            "category": "certificate_hygiene",
+            "confidence": 0.9100000262260437,
+            "severity": "medium"
+          },
+          "kind": "cert_expiry",
+          "latency_ms": 4411.843,
+          "verdict": {
+            "action": "monitor",
+            "category": "certificate_expiry",
+            "confidence": 0.8999999761581421,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 9,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 1839.4272,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_process_execution",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 10,
+          "expected": {
+            "action": "block",
+            "category": "malware",
+            "confidence": 0.9700000286102295,
+            "severity": "critical"
+          },
+          "kind": "malware_hash",
+          "latency_ms": 4022.9195000000004,
+          "verdict": {
+            "action": "block",
+            "category": "ransomware_detection",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 11,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 3401.7333,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 12,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 3234.98,
+          "verdict": {
+            "action": "escalate",
+            "category": "dns_txt_exfiltration",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 13,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 3501.1929999999998,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 14,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 2215.3646,
+          "verdict": {
+            "action": "monitor",
+            "category": "geo_improbable_login",
+            "confidence": 0.800000011920929,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 15,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 2856.6371,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 16,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 2722.4612,
+          "verdict": {
+            "action": "monitor",
+            "category": "anomalous_login_activity",
+            "confidence": 0.800000011920929,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 17,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 3702.3981,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_execution",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 18,
+          "expected": {
+            "action": "monitor",
+            "category": "certificate_hygiene",
+            "confidence": 0.9100000262260437,
+            "severity": "medium"
+          },
+          "kind": "cert_expiry",
+          "latency_ms": 2448.0557,
+          "verdict": {
+            "action": "monitor",
+            "category": "tls_certificate_expiry",
+            "confidence": 0.8999999761581421,
+            "severity": "low"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 19,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 4008.4305999999997,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_powershell_execution",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 20,
+          "expected": {
+            "action": "escalate",
+            "category": "availability",
+            "confidence": 0.8899999856948853,
+            "severity": "high"
+          },
+          "kind": "service_crash_loop",
+          "latency_ms": 4491.5731000000005,
+          "verdict": {
+            "action": "escalate",
+            "category": "service_instability",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 21,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 3295.7373,
+          "verdict": {
+            "action": "monitor",
+            "category": "geo_velocity_anomaly",
+            "confidence": 0.800000011920929,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 22,
+          "expected": {
+            "action": "escalate",
+            "category": "lateral_movement",
+            "confidence": 0.8999999761581421,
+            "severity": "critical"
+          },
+          "kind": "lateral_movement",
+          "latency_ms": 1690.4473,
+          "verdict": {
+            "action": "escalate",
+            "category": "remote_service_creation",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 23,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 4562.831499999999,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_dns_activity",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 24,
+          "expected": {
+            "action": "escalate",
+            "category": "availability",
+            "confidence": 0.8899999856948853,
+            "severity": "high"
+          },
+          "kind": "service_crash_loop",
+          "latency_ms": 2640.7637,
+          "verdict": {
+            "action": "escalate",
+            "category": "service_instability",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 25,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 3562.8657000000003,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 26,
+          "expected": {
+            "action": "monitor",
+            "category": "capacity",
+            "confidence": 0.8600000143051147,
+            "severity": "medium"
+          },
+          "kind": "disk_pressure",
+          "latency_ms": 2297.5881999999997,
+          "verdict": {
+            "action": "monitor",
+            "category": "disk_usage",
+            "confidence": 0.8999999761581421,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 27,
+          "expected": {
+            "action": "ignore",
+            "category": "benign_auth",
+            "confidence": 0.9599999785423279,
+            "severity": "low"
+          },
+          "kind": "benign_login",
+          "latency_ms": 1843.2766000000001,
+          "verdict": {
+            "action": "ignore",
+            "category": "user_authentication",
+            "confidence": 0.949999988079071,
+            "severity": "low"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 28,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 4008.1257,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 29,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 2295.1915,
+          "verdict": {
+            "action": "escalate",
+            "category": "dns_anomaly",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 30,
+          "expected": {
+            "action": "block",
+            "category": "brute_force",
+            "confidence": 0.9300000071525574,
+            "severity": "high"
+          },
+          "kind": "brute_force",
+          "latency_ms": 1746.4334999999999,
+          "verdict": {
+            "action": "escalate",
+            "category": "brute_force_ssh",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 31,
+          "expected": {
+            "action": "block",
+            "category": "brute_force",
+            "confidence": 0.9300000071525574,
+            "severity": "high"
+          },
+          "kind": "brute_force",
+          "latency_ms": 3446.5612,
+          "verdict": {
+            "action": "escalate",
+            "category": "brute_force_attempt_detected",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 32,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 3404.8588999999997,
+          "verdict": {
+            "action": "monitor",
+            "category": "suspicious_login_activity",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 33,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 5869.1443,
+          "verdict": {
+            "action": "escalate",
+            "category": "dns_tunneling_activity",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 34,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 3014.9374,
+          "verdict": {
+            "action": "monitor",
+            "category": "dns_anomaly",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 35,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 3755.9248,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 36,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 2615.6531,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_login_activity",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 37,
+          "expected": {
+            "action": "escalate",
+            "category": "availability",
+            "confidence": 0.8899999856948853,
+            "severity": "high"
+          },
+          "kind": "service_crash_loop",
+          "latency_ms": 2384.7511,
+          "verdict": {
+            "action": "monitor",
+            "category": "service_instability",
+            "confidence": 0.8500000238418579,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 38,
+          "expected": {
+            "action": "ignore",
+            "category": "benign_auth",
+            "confidence": 0.9599999785423279,
+            "severity": "low"
+          },
+          "kind": "benign_login",
+          "latency_ms": 3317.762,
+          "verdict": {
+            "action": "monitor",
+            "category": "user_authentication",
+            "confidence": 0.800000011920929,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 39,
+          "expected": {
+            "action": "monitor",
+            "category": "reconnaissance",
+            "confidence": 0.8100000023841858,
+            "severity": "medium"
+          },
+          "kind": "port_scan",
+          "latency_ms": 1835.2797,
+          "verdict": {
+            "action": "block",
+            "category": "port_scan",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 40,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 2765.5153,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 41,
+          "expected": {
+            "action": "escalate",
+            "category": "lateral_movement",
+            "confidence": 0.8999999761581421,
+            "severity": "critical"
+          },
+          "kind": "lateral_movement",
+          "latency_ms": 2713.5499,
+          "verdict": {
+            "action": "escalate",
+            "category": "remote_service_creation",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 42,
+          "expected": {
+            "action": "monitor",
+            "category": "certificate_hygiene",
+            "confidence": 0.9100000262260437,
+            "severity": "medium"
+          },
+          "kind": "cert_expiry",
+          "latency_ms": 3392.8069,
+          "verdict": {
+            "action": "monitor",
+            "category": "certificate_expiration",
+            "confidence": 0.8999999761581421,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 43,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 4597.5047,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_sign_in",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 44,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 2790.1128000000003,
+          "verdict": {
+            "action": "escalate",
+            "category": "anomalous_login_activity",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 45,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 2166.0126,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_powershell_activity",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 46,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 4863.094,
+          "verdict": {
+            "action": "escalate",
+            "category": "dns_data_exfiltration",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 47,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 2450.6117,
+          "verdict": {
+            "action": "escalate",
+            "category": "dns_tunneling_detected",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 48,
+          "expected": {
+            "action": "monitor",
+            "category": "capacity",
+            "confidence": 0.8600000143051147,
+            "severity": "medium"
+          },
+          "kind": "disk_pressure",
+          "latency_ms": 2049.5506,
+          "verdict": {
+            "action": "monitor",
+            "category": "disk_usage_alert",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 49,
+          "expected": {
+            "action": "monitor",
+            "category": "certificate_hygiene",
+            "confidence": 0.9100000262260437,
+            "severity": "medium"
+          },
+          "kind": "cert_expiry",
+          "latency_ms": 2636.3084,
+          "verdict": {
+            "action": "monitor",
+            "category": "tls_certificate_expiry",
+            "confidence": 0.8999999761581421,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 50,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 1924.9258,
+          "verdict": {
+            "action": "monitor",
+            "category": "suspicious_geographic_activity",
+            "confidence": 0.800000011920929,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 51,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 4922.2235,
+          "verdict": {
+            "action": "monitor",
+            "category": "anomalous_sign_in",
+            "confidence": 0.8500000238418579,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 52,
+          "expected": {
+            "action": "escalate",
+            "category": "availability",
+            "confidence": 0.8899999856948853,
+            "severity": "high"
+          },
+          "kind": "service_crash_loop",
+          "latency_ms": 2794.8727,
+          "verdict": {
+            "action": "escalate",
+            "category": "service_instability",
+            "confidence": 0.8500000238418579,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 53,
+          "expected": {
+            "action": "block",
+            "category": "brute_force",
+            "confidence": 0.9300000071525574,
+            "severity": "high"
+          },
+          "kind": "brute_force",
+          "latency_ms": 1919.9090999999999,
+          "verdict": {
+            "action": "escalate",
+            "category": "brute_force",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 54,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 4980.3688,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_execution",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 55,
+          "expected": {
+            "action": "monitor",
+            "category": "reconnaissance",
+            "confidence": 0.8100000023841858,
+            "severity": "medium"
+          },
+          "kind": "port_scan",
+          "latency_ms": 5063.6378,
+          "verdict": {
+            "action": "escalate",
+            "category": "port_scanning",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 56,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 2921.459,
+          "verdict": {
+            "action": "monitor",
+            "category": "suspicious_dns_activity",
+            "confidence": 0.800000011920929,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 57,
+          "expected": {
+            "action": "escalate",
+            "category": "lateral_movement",
+            "confidence": 0.8999999761581421,
+            "severity": "critical"
+          },
+          "kind": "lateral_movement",
+          "latency_ms": 5592.296,
+          "verdict": {
+            "action": "monitor",
+            "category": "remote_service_creation",
+            "confidence": 0.800000011920929,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 58,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 2691.7635,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 59,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 1949.3662,
+          "verdict": {
+            "action": "monitor",
+            "category": "suspicious_login_activity",
+            "confidence": 0.800000011920929,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 60,
+          "expected": {
+            "action": "block",
+            "category": "brute_force",
+            "confidence": 0.9300000071525574,
+            "severity": "high"
+          },
+          "kind": "brute_force",
+          "latency_ms": 2992.4526,
+          "verdict": {
+            "action": "escalate",
+            "category": "ssh_bruteforce_attempt",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 61,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 4098.8584,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation_attempt",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 62,
+          "expected": {
+            "action": "escalate",
+            "category": "lateral_movement",
+            "confidence": 0.8999999761581421,
+            "severity": "critical"
+          },
+          "kind": "lateral_movement",
+          "latency_ms": 3681.9631,
+          "verdict": {
+            "action": "escalate",
+            "category": "smb_remote_service_creation",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 63,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 4119.3551,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_powershell_execution",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 64,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 3614.0571,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 65,
+          "expected": {
+            "action": "monitor",
+            "category": "capacity",
+            "confidence": 0.8600000143051147,
+            "severity": "medium"
+          },
+          "kind": "disk_pressure",
+          "latency_ms": 4170.2784,
+          "verdict": {
+            "action": "monitor",
+            "category": "disk_space_usage",
+            "confidence": 0.8999999761581421,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 66,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 2452.9818,
+          "verdict": {
+            "action": "escalate",
+            "category": "dns_tunneling_detected",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 67,
+          "expected": {
+            "action": "block",
+            "category": "malware",
+            "confidence": 0.9700000286102295,
+            "severity": "critical"
+          },
+          "kind": "malware_hash",
+          "latency_ms": 2983.4604000000004,
+          "verdict": {
+            "action": "block",
+            "category": "ransomware_detection",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 68,
+          "expected": {
+            "action": "block",
+            "category": "malware",
+            "confidence": 0.9700000286102295,
+            "severity": "critical"
+          },
+          "kind": "malware_hash",
+          "latency_ms": 2548.2891,
+          "verdict": {
+            "action": "block",
+            "category": "ransomware_alert",
+            "confidence": 0.9800000190734863,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 69,
+          "expected": {
+            "action": "monitor",
+            "category": "certificate_hygiene",
+            "confidence": 0.9100000262260437,
+            "severity": "medium"
+          },
+          "kind": "cert_expiry",
+          "latency_ms": 2801.8021,
+          "verdict": {
+            "action": "monitor",
+            "category": "certificate_management",
+            "confidence": 0.8999999761581421,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 70,
+          "expected": {
+            "action": "block",
+            "category": "malware",
+            "confidence": 0.9700000286102295,
+            "severity": "critical"
+          },
+          "kind": "malware_hash",
+          "latency_ms": 3096.2475,
+          "verdict": {
+            "action": "block",
+            "category": "ransomware_activity",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 71,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 4351.9625,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation_attempt",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 72,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 3813.5816999999997,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_dns_activity",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 73,
+          "expected": {
+            "action": "ignore",
+            "category": "benign_auth",
+            "confidence": 0.9599999785423279,
+            "severity": "low"
+          },
+          "kind": "benign_login",
+          "latency_ms": 2647.3167000000003,
+          "verdict": {
+            "action": "escalate",
+            "category": "privileged_access",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 74,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 2252.807,
+          "verdict": {
+            "action": "monitor",
+            "category": "suspicious_logon_activity",
+            "confidence": 0.800000011920929,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 75,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 2406.7882,
+          "verdict": {
+            "action": "monitor",
+            "category": "dns_exfiltration_suspected",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 76,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 4602.7747,
+          "verdict": {
+            "action": "escalate",
+            "category": "malicious_powershell_execution",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 77,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 3792.144,
+          "verdict": {
+            "action": "escalate",
+            "category": "dns_tunneling_detected",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 78,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 3559.8498,
+          "verdict": {
+            "action": "escalate",
+            "category": "malicious_powershell_command",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 79,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 2976.8382,
+          "verdict": {
+            "action": "escalate",
+            "category": "unusual_dns_activity",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 80,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 1756.993,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 81,
+          "expected": {
+            "action": "monitor",
+            "category": "capacity",
+            "confidence": 0.8600000143051147,
+            "severity": "medium"
+          },
+          "kind": "disk_pressure",
+          "latency_ms": 3605.2378000000003,
+          "verdict": {
+            "action": "monitor",
+            "category": "disk_usage_growth",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 82,
+          "expected": {
+            "action": "escalate",
+            "category": "availability",
+            "confidence": 0.8899999856948853,
+            "severity": "high"
+          },
+          "kind": "service_crash_loop",
+          "latency_ms": 3913.1112999999996,
+          "verdict": {
+            "action": "monitor",
+            "category": "application_crash_loop",
+            "confidence": 0.8999999761581421,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 83,
+          "expected": {
+            "action": "block",
+            "category": "brute_force",
+            "confidence": 0.9300000071525574,
+            "severity": "high"
+          },
+          "kind": "brute_force",
+          "latency_ms": 1898.4372,
+          "verdict": {
+            "action": "escalate",
+            "category": "brute_force_attack",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 84,
+          "expected": {
+            "action": "monitor",
+            "category": "capacity",
+            "confidence": 0.8600000143051147,
+            "severity": "medium"
+          },
+          "kind": "disk_pressure",
+          "latency_ms": 2958.0983,
+          "verdict": {
+            "action": "monitor",
+            "category": "disk_usage_alert",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 85,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 2214.7212999999997,
+          "verdict": {
+            "action": "escalate",
+            "category": "geo_anomaly",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 86,
+          "expected": {
+            "action": "block",
+            "category": "brute_force",
+            "confidence": 0.9300000071525574,
+            "severity": "high"
+          },
+          "kind": "brute_force",
+          "latency_ms": 1689.4657,
+          "verdict": {
+            "action": "escalate",
+            "category": "brute_force_attack",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 87,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 4921.2316,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 88,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 2498.2747,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 89,
+          "expected": {
+            "action": "escalate",
+            "category": "lateral_movement",
+            "confidence": 0.8999999761581421,
+            "severity": "critical"
+          },
+          "kind": "lateral_movement",
+          "latency_ms": 3077.8753,
+          "verdict": {
+            "action": "escalate",
+            "category": "lateral_movement",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 90,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 2666.4258,
+          "verdict": {
+            "action": "escalate",
+            "category": "unauthorized_uid_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 91,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 6445.0034,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_powershell_execution",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 92,
+          "expected": {
+            "action": "block",
+            "category": "brute_force",
+            "confidence": 0.9300000071525574,
+            "severity": "high"
+          },
+          "kind": "brute_force",
+          "latency_ms": 3012.1811,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_authentication",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 93,
+          "expected": {
+            "action": "monitor",
+            "category": "capacity",
+            "confidence": 0.8600000143051147,
+            "severity": "medium"
+          },
+          "kind": "disk_pressure",
+          "latency_ms": 3252.6904,
+          "verdict": {
+            "action": "monitor",
+            "category": "disk_usage_growth",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 94,
+          "expected": {
+            "action": "block",
+            "category": "malware",
+            "confidence": 0.9700000286102295,
+            "severity": "critical"
+          },
+          "kind": "malware_hash",
+          "latency_ms": 3474.1686,
+          "verdict": {
+            "action": "block",
+            "category": "ransomware_detection",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 95,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 4310.7723,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 96,
+          "expected": {
+            "action": "monitor",
+            "category": "reconnaissance",
+            "confidence": 0.8100000023841858,
+            "severity": "medium"
+          },
+          "kind": "port_scan",
+          "latency_ms": 3260.4625,
+          "verdict": {
+            "action": "escalate",
+            "category": "port_scanning",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 97,
+          "expected": {
+            "action": "block",
+            "category": "brute_force",
+            "confidence": 0.9300000071525574,
+            "severity": "high"
+          },
+          "kind": "brute_force",
+          "latency_ms": 4341.268099999999,
+          "verdict": {
+            "action": "escalate",
+            "category": "brute_force_detected",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 98,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 3847.8167000000003,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 99,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 5153.1162,
+          "verdict": {
+            "action": "monitor",
+            "category": "anomalous_auth_activity",
+            "confidence": 0.8500000238418579,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 100,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 2897.7002,
+          "verdict": {
+            "action": "monitor",
+            "category": "suspicious_login_activity",
+            "confidence": 0.800000011920929,
+            "severity": "medium"
+          }
+        }
+      ]
+    },
+    {
+      "arm": "D",
+      "summary": {
+        "auth_ms": 0.028899999999999995,
+        "avg_ms": 5055.105197,
+        "boundary_calls": 28,
+        "bytes_off_host": 31184,
+        "bytes_rx": 45357,
+        "bytes_tx": 31184,
+        "completed": 100,
+        "contention_ms": 29625.445006000005,
+        "cost_usd": 0.025697500000000005,
+        "done": true,
+        "elapsed_s": 19.5870461,
+        "escalations": 28,
+        "events_off_host": 28,
+        "failed": 0,
+        "gateway_ms": 40581.0,
+        "inference_ms": 429504.65399399993,
+        "label": "D",
+        "local_tokens": 51877,
+        "model_calls": 228,
+        "network_ms": 5787.3099999999995,
+        "orch_ms": 46368.33889999997,
+        "p50_ms": 4942.8423999999995,
+        "p95_ms": 7341.313099999999,
+        "queue_ms": 0.0,
+        "retries": 0,
+        "rubric_action_exact": 54,
+        "rubric_graded": 100,
+        "rubric_severity_exact": 49,
+        "rubric_severity_within_one": 99,
+        "serde_us": 5670.9,
+        "started": true,
+        "throughput_ops": 5.105415052859859,
+        "token_fetches": 0,
+        "tokens_in": 7679,
+        "tokens_out": 650,
+        "tool_calls": 200,
+        "tool_ms": 2.379,
+        "total": 100
+      },
+      "title": "D · Hybrid sovereign router",
+      "verdicts": [
+        {
+          "error": null,
+          "event_id": 1,
+          "expected": {
+            "action": "escalate",
+            "category": "lateral_movement",
+            "confidence": 0.8999999761581421,
+            "severity": "critical"
+          },
+          "kind": "lateral_movement",
+          "latency_ms": 3867.4289000000003,
+          "verdict": {
+            "action": "escalate",
+            "category": "smb_service_creation",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 2,
+          "expected": {
+            "action": "ignore",
+            "category": "benign_auth",
+            "confidence": 0.9599999785423279,
+            "severity": "low"
+          },
+          "kind": "benign_login",
+          "latency_ms": 5389.629,
+          "verdict": {
+            "action": "monitor",
+            "category": "privileged_access",
+            "confidence": 0.8999999761581421,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 3,
+          "expected": {
+            "action": "block",
+            "category": "malware",
+            "confidence": 0.9700000286102295,
+            "severity": "critical"
+          },
+          "kind": "malware_hash",
+          "latency_ms": 5267.6832,
+          "verdict": {
+            "action": "block",
+            "category": "ransomware_detection",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 4,
+          "expected": {
+            "action": "escalate",
+            "category": "lateral_movement",
+            "confidence": 0.8999999761581421,
+            "severity": "critical"
+          },
+          "kind": "lateral_movement",
+          "latency_ms": 4708.3228,
+          "verdict": {
+            "action": "escalate",
+            "category": "smb_service_creation",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 5,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 3723.6629,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_activity",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 6,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 5106.8138,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 7,
+          "expected": {
+            "action": "monitor",
+            "category": "reconnaissance",
+            "confidence": 0.8100000023841858,
+            "severity": "medium"
+          },
+          "kind": "port_scan",
+          "latency_ms": 4682.4132,
+          "verdict": {
+            "action": "escalate",
+            "category": "network_scan",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 8,
+          "expected": {
+            "action": "monitor",
+            "category": "certificate_hygiene",
+            "confidence": 0.9100000262260437,
+            "severity": "medium"
+          },
+          "kind": "cert_expiry",
+          "latency_ms": 6912.7282000000005,
+          "verdict": {
+            "action": "monitor",
+            "category": "cert_expiration",
+            "confidence": 0.8999999761581421,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 9,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 8513.6052,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_powershell_activity",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 10,
+          "expected": {
+            "action": "block",
+            "category": "malware",
+            "confidence": 0.9700000286102295,
+            "severity": "critical"
+          },
+          "kind": "malware_hash",
+          "latency_ms": 3799.9497,
+          "verdict": {
+            "action": "escalate",
+            "category": "ransomware_detection",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 11,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 4840.7729,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 12,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 4840.7613,
+          "verdict": {
+            "action": "escalate",
+            "category": "dns_query_abuse",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 13,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 5863.7189,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 14,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 3823.4338000000002,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_sign_in",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 15,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 3824.3827,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 16,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 4101.4799,
+          "verdict": {
+            "action": "escalate",
+            "category": "anomalous_sign_in",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 17,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 4400.804499999999,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_execution",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 18,
+          "expected": {
+            "action": "monitor",
+            "category": "certificate_hygiene",
+            "confidence": 0.9100000262260437,
+            "severity": "medium"
+          },
+          "kind": "cert_expiry",
+          "latency_ms": 7865.5794,
+          "verdict": {
+            "action": "monitor",
+            "category": "certificate_monitoring",
+            "confidence": 0.8999999761581421,
+            "severity": "low"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 19,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 4488.8156,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_powershell_execution",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 20,
+          "expected": {
+            "action": "escalate",
+            "category": "availability",
+            "confidence": 0.8899999856948853,
+            "severity": "high"
+          },
+          "kind": "service_crash_loop",
+          "latency_ms": 3821.6646,
+          "verdict": {
+            "action": "escalate",
+            "category": "service_instability",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 21,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 3821.9946999999997,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_sign_in",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 22,
+          "expected": {
+            "action": "escalate",
+            "category": "lateral_movement",
+            "confidence": 0.8999999761581421,
+            "severity": "critical"
+          },
+          "kind": "lateral_movement",
+          "latency_ms": 3822.9975999999997,
+          "verdict": {
+            "action": "escalate",
+            "category": "smb_service_creation",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 23,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 4865.9039,
+          "verdict": {
+            "action": "escalate",
+            "category": "dns_query_abuse",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 24,
+          "expected": {
+            "action": "escalate",
+            "category": "availability",
+            "confidence": 0.8899999856948853,
+            "severity": "high"
+          },
+          "kind": "service_crash_loop",
+          "latency_ms": 4663.031,
+          "verdict": {
+            "action": "escalate",
+            "category": "service_instability",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 25,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 4158.257,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 26,
+          "expected": {
+            "action": "monitor",
+            "category": "capacity",
+            "confidence": 0.8600000143051147,
+            "severity": "medium"
+          },
+          "kind": "disk_pressure",
+          "latency_ms": 4227.6308,
+          "verdict": {
+            "action": "escalate",
+            "category": "disk_usage_alert",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 27,
+          "expected": {
+            "action": "ignore",
+            "category": "benign_auth",
+            "confidence": 0.9599999785423279,
+            "severity": "low"
+          },
+          "kind": "benign_login",
+          "latency_ms": 5452.5933,
+          "verdict": {
+            "action": "ignore",
+            "category": "successful_user_signin",
+            "confidence": 0.8999999761581421,
+            "severity": "low"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 28,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 4434.6227,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 29,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 4270.0806,
+          "verdict": {
+            "action": "escalate",
+            "category": "dns_abuse",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 30,
+          "expected": {
+            "action": "block",
+            "category": "brute_force",
+            "confidence": 0.9300000071525574,
+            "severity": "high"
+          },
+          "kind": "brute_force",
+          "latency_ms": 3529.5074,
+          "verdict": {
+            "action": "escalate",
+            "category": "brute_force_attempt",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 31,
+          "expected": {
+            "action": "block",
+            "category": "brute_force",
+            "confidence": 0.9300000071525574,
+            "severity": "high"
+          },
+          "kind": "brute_force",
+          "latency_ms": 3860.3926,
+          "verdict": {
+            "action": "escalate",
+            "category": "brute_force_attempt",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 32,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 3832.0981,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_sign_in",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 33,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 4992.9045,
+          "verdict": {
+            "action": "escalate",
+            "category": "dns_abuse",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 34,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 5768.797799999999,
+          "verdict": {
+            "action": "escalate",
+            "category": "dns_query_anomaly",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 35,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 8121.700900000001,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 36,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 4494.992,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_sign_in",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 37,
+          "expected": {
+            "action": "escalate",
+            "category": "availability",
+            "confidence": 0.8899999856948853,
+            "severity": "high"
+          },
+          "kind": "service_crash_loop",
+          "latency_ms": 5539.077,
+          "verdict": {
+            "action": "escalate",
+            "category": "service_instability",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 38,
+          "expected": {
+            "action": "ignore",
+            "category": "benign_auth",
+            "confidence": 0.9599999785423279,
+            "severity": "low"
+          },
+          "kind": "benign_login",
+          "latency_ms": 4882.696199999999,
+          "verdict": {
+            "action": "monitor",
+            "category": "user_authentication",
+            "confidence": 0.800000011920929,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 39,
+          "expected": {
+            "action": "monitor",
+            "category": "reconnaissance",
+            "confidence": 0.8100000023841858,
+            "severity": "medium"
+          },
+          "kind": "port_scan",
+          "latency_ms": 5232.6338000000005,
+          "verdict": {
+            "action": "escalate",
+            "category": "network_scan",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 40,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 5853.7659,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 41,
+          "expected": {
+            "action": "escalate",
+            "category": "lateral_movement",
+            "confidence": 0.8999999761581421,
+            "severity": "critical"
+          },
+          "kind": "lateral_movement",
+          "latency_ms": 5222.4411,
+          "verdict": {
+            "action": "escalate",
+            "category": "smb_service_creation",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 42,
+          "expected": {
+            "action": "monitor",
+            "category": "certificate_hygiene",
+            "confidence": 0.9100000262260437,
+            "severity": "medium"
+          },
+          "kind": "cert_expiry",
+          "latency_ms": 5732.57,
+          "verdict": {
+            "action": "escalate",
+            "category": "certificate_expiry_imminent",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 43,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 4467.8287,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_sign_in",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 44,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 4789.9457999999995,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_sign_in",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 45,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 5638.0596000000005,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_powershell_execution",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 46,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 5532.1939,
+          "verdict": {
+            "action": "escalate",
+            "category": "dns_query_anomaly",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 47,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 5215.1129,
+          "verdict": {
+            "action": "escalate",
+            "category": "dns_query_anomaly",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 48,
+          "expected": {
+            "action": "monitor",
+            "category": "capacity",
+            "confidence": 0.8600000143051147,
+            "severity": "medium"
+          },
+          "kind": "disk_pressure",
+          "latency_ms": 5089.0082,
+          "verdict": {
+            "action": "escalate",
+            "category": "disk_usage_alert",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 49,
+          "expected": {
+            "action": "monitor",
+            "category": "certificate_hygiene",
+            "confidence": 0.9100000262260437,
+            "severity": "medium"
+          },
+          "kind": "cert_expiry",
+          "latency_ms": 5513.5294,
+          "verdict": {
+            "action": "monitor",
+            "category": "certificate_expiration",
+            "confidence": 0.8999999761581421,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 50,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 5844.6735,
+          "verdict": {
+            "action": "monitor",
+            "category": "unusual_geolocation_signin",
+            "confidence": 0.800000011920929,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 51,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 4619.7291,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_login",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 52,
+          "expected": {
+            "action": "escalate",
+            "category": "availability",
+            "confidence": 0.8899999856948853,
+            "severity": "high"
+          },
+          "kind": "service_crash_loop",
+          "latency_ms": 5244.073399999999,
+          "verdict": {
+            "action": "escalate",
+            "category": "service_instability",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 53,
+          "expected": {
+            "action": "block",
+            "category": "brute_force",
+            "confidence": 0.9300000071525574,
+            "severity": "high"
+          },
+          "kind": "brute_force",
+          "latency_ms": 5692.9746000000005,
+          "verdict": {
+            "action": "escalate",
+            "category": "brute_force_attack",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 54,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 5789.2105,
+          "verdict": {
+            "action": "escalate",
+            "category": "malware_execution",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 55,
+          "expected": {
+            "action": "monitor",
+            "category": "reconnaissance",
+            "confidence": 0.8100000023841858,
+            "severity": "medium"
+          },
+          "kind": "port_scan",
+          "latency_ms": 5035.599,
+          "verdict": {
+            "action": "escalate",
+            "category": "network_scan",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 56,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 6582.284,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_dns_activity",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 57,
+          "expected": {
+            "action": "escalate",
+            "category": "lateral_movement",
+            "confidence": 0.8999999761581421,
+            "severity": "critical"
+          },
+          "kind": "lateral_movement",
+          "latency_ms": 4984.5498,
+          "verdict": {
+            "action": "escalate",
+            "category": "smb_service_creation",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 58,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 5320.4845000000005,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 59,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 4690.0659000000005,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_sign_in",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 60,
+          "expected": {
+            "action": "block",
+            "category": "brute_force",
+            "confidence": 0.9300000071525574,
+            "severity": "high"
+          },
+          "kind": "brute_force",
+          "latency_ms": 3990.2592,
+          "verdict": {
+            "action": "escalate",
+            "category": "brute_force_attack",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 61,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 6097.3392,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 62,
+          "expected": {
+            "action": "escalate",
+            "category": "lateral_movement",
+            "confidence": 0.8999999761581421,
+            "severity": "critical"
+          },
+          "kind": "lateral_movement",
+          "latency_ms": 5966.0047,
+          "verdict": {
+            "action": "escalate",
+            "category": "remote_service_creation",
+            "confidence": 0.949999988079071,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 63,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 4314.5002,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_powershell_execution",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 64,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 3908.6885,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 65,
+          "expected": {
+            "action": "monitor",
+            "category": "capacity",
+            "confidence": 0.8600000143051147,
+            "severity": "medium"
+          },
+          "kind": "disk_pressure",
+          "latency_ms": 4188.1032,
+          "verdict": {
+            "action": "escalate",
+            "category": "disk_usage_alert",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 66,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 5738.63,
+          "verdict": {
+            "action": "escalate",
+            "category": "dns_query_anomaly",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 67,
+          "expected": {
+            "action": "block",
+            "category": "malware",
+            "confidence": 0.9700000286102295,
+            "severity": "critical"
+          },
+          "kind": "malware_hash",
+          "latency_ms": 4444.6269,
+          "verdict": {
+            "action": "block",
+            "category": "ransomware_detected",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 68,
+          "expected": {
+            "action": "block",
+            "category": "malware",
+            "confidence": 0.9700000286102295,
+            "severity": "critical"
+          },
+          "kind": "malware_hash",
+          "latency_ms": 4149.031800000001,
+          "verdict": {
+            "action": "block",
+            "category": "ransomware_detection",
+            "confidence": 0.9800000190734863,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 69,
+          "expected": {
+            "action": "monitor",
+            "category": "certificate_hygiene",
+            "confidence": 0.9100000262260437,
+            "severity": "medium"
+          },
+          "kind": "cert_expiry",
+          "latency_ms": 5349.6025,
+          "verdict": {
+            "action": "monitor",
+            "category": "certificate_expiration",
+            "confidence": 0.8999999761581421,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 70,
+          "expected": {
+            "action": "block",
+            "category": "malware",
+            "confidence": 0.9700000286102295,
+            "severity": "critical"
+          },
+          "kind": "malware_hash",
+          "latency_ms": 7516.459,
+          "verdict": {
+            "action": "block",
+            "category": "ransomware_detection",
+            "confidence": 0.9800000190734863,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 71,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 5406.5462,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 72,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 4053.0712,
+          "verdict": {
+            "action": "monitor",
+            "category": "suspicious_dns_activity",
+            "confidence": 0.8500000238418579,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 73,
+          "expected": {
+            "action": "ignore",
+            "category": "benign_auth",
+            "confidence": 0.9599999785423279,
+            "severity": "low"
+          },
+          "kind": "benign_login",
+          "latency_ms": 5049.0725,
+          "verdict": {
+            "action": "escalate",
+            "category": "privileged_user_sign_in",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 74,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 3637.3808,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_sign_in",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 75,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 5356.0065,
+          "verdict": {
+            "action": "escalate",
+            "category": "dns_query_anomaly",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 76,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 4706.8171,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_powershell_execution",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 77,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 5435.7176,
+          "verdict": {
+            "action": "escalate",
+            "category": "dns_abuse",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 78,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 4602.2175,
+          "verdict": {
+            "action": "escalate",
+            "category": "malware_execution",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 79,
+          "expected": {
+            "action": "block",
+            "category": "data_exfiltration",
+            "confidence": 0.8799999952316284,
+            "severity": "high"
+          },
+          "kind": "dns_exfiltration",
+          "latency_ms": 6470.2073,
+          "verdict": {
+            "action": "monitor",
+            "category": "dns_anomaly",
+            "confidence": 0.8500000238418579,
+            "severity": "medium"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 80,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 6501.78,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 81,
+          "expected": {
+            "action": "monitor",
+            "category": "capacity",
+            "confidence": 0.8600000143051147,
+            "severity": "medium"
+          },
+          "kind": "disk_pressure",
+          "latency_ms": 4453.7769,
+          "verdict": {
+            "action": "escalate",
+            "category": "disk_usage_alert",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 82,
+          "expected": {
+            "action": "escalate",
+            "category": "availability",
+            "confidence": 0.8899999856948853,
+            "severity": "high"
+          },
+          "kind": "service_crash_loop",
+          "latency_ms": 2473.9488,
+          "verdict": {
+            "action": "escalate",
+            "category": "service_instability",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 83,
+          "expected": {
+            "action": "block",
+            "category": "brute_force",
+            "confidence": 0.9300000071525574,
+            "severity": "high"
+          },
+          "kind": "brute_force",
+          "latency_ms": 4809.672799999999,
+          "verdict": {
+            "action": "escalate",
+            "category": "brute_force_attempt",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 84,
+          "expected": {
+            "action": "monitor",
+            "category": "capacity",
+            "confidence": 0.8600000143051147,
+            "severity": "medium"
+          },
+          "kind": "disk_pressure",
+          "latency_ms": 2772.3643,
+          "verdict": {
+            "action": "escalate",
+            "category": "disk_usage_alert",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 85,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 3744.2368,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_sign_in",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 86,
+          "expected": {
+            "action": "block",
+            "category": "brute_force",
+            "confidence": 0.9300000071525574,
+            "severity": "high"
+          },
+          "kind": "brute_force",
+          "latency_ms": 4582.4296,
+          "verdict": {
+            "action": "escalate",
+            "category": "brute_force_ssh",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 87,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 6249.1835,
+          "verdict": {
+            "action": "escalate",
+            "category": "unauthorized_uid_change",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 88,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 6230.3541,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 89,
+          "expected": {
+            "action": "escalate",
+            "category": "lateral_movement",
+            "confidence": 0.8999999761581421,
+            "severity": "critical"
+          },
+          "kind": "lateral_movement",
+          "latency_ms": 4462.2269,
+          "verdict": {
+            "action": "escalate",
+            "category": "smb_service_creation",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 90,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 6021.0312,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 91,
+          "expected": {
+            "action": "block",
+            "category": "malicious_script",
+            "confidence": 0.9200000166893005,
+            "severity": "critical"
+          },
+          "kind": "suspicious_powershell",
+          "latency_ms": 7341.313099999999,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_execution",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 92,
+          "expected": {
+            "action": "block",
+            "category": "brute_force",
+            "confidence": 0.9300000071525574,
+            "severity": "high"
+          },
+          "kind": "brute_force",
+          "latency_ms": 7261.7813,
+          "verdict": {
+            "action": "escalate",
+            "category": "brute_force_attack",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 93,
+          "expected": {
+            "action": "monitor",
+            "category": "capacity",
+            "confidence": 0.8600000143051147,
+            "severity": "medium"
+          },
+          "kind": "disk_pressure",
+          "latency_ms": 5725.321199999999,
+          "verdict": {
+            "action": "escalate",
+            "category": "disk_usage_alert",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 94,
+          "expected": {
+            "action": "block",
+            "category": "malware",
+            "confidence": 0.9700000286102295,
+            "severity": "critical"
+          },
+          "kind": "malware_hash",
+          "latency_ms": 7402.176100000001,
+          "verdict": {
+            "action": "block",
+            "category": "ransomware_detection",
+            "confidence": 0.9800000190734863,
+            "severity": "critical"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 95,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 5309.1974,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 96,
+          "expected": {
+            "action": "monitor",
+            "category": "reconnaissance",
+            "confidence": 0.8100000023841858,
+            "severity": "medium"
+          },
+          "kind": "port_scan",
+          "latency_ms": 3621.5562999999997,
+          "verdict": {
+            "action": "escalate",
+            "category": "network_scan",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 97,
+          "expected": {
+            "action": "block",
+            "category": "brute_force",
+            "confidence": 0.9300000071525574,
+            "severity": "high"
+          },
+          "kind": "brute_force",
+          "latency_ms": 3345.2755,
+          "verdict": {
+            "action": "escalate",
+            "category": "brute_force_ssh",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 98,
+          "expected": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.949999988079071,
+            "severity": "critical"
+          },
+          "kind": "privilege_escalation",
+          "latency_ms": 6532.1847,
+          "verdict": {
+            "action": "escalate",
+            "category": "privilege_escalation",
+            "confidence": 0.8999999761581421,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 99,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 4942.8423999999995,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_sign_in",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        },
+        {
+          "error": null,
+          "event_id": 100,
+          "expected": {
+            "action": "escalate",
+            "category": "account_compromise",
+            "confidence": 0.8399999737739563,
+            "severity": "high"
+          },
+          "kind": "impossible_travel",
+          "latency_ms": 4673.9227,
+          "verdict": {
+            "action": "escalate",
+            "category": "suspicious_login_activity",
+            "confidence": 0.8500000238418579,
+            "severity": "high"
+          }
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "arm_a": "simulated runtime hops (azure-copilot: WAN 60-110ms, JWT 8-20ms, policy 15-45ms, safety 40-90ms on model steps)",
+    "cloud": "gpt-4o-global via aoai-inversiongap-xxxxx.openai.azure.com",
+    "cloud_concurrency": 8,
+    "edge_concurrency": 32,
+    "edge_energy_usd_per_m": 2.0,
+    "edge_model": "phi4:latest",
+    "escalate_below": 0.8500000238418579,
+    "escalate_critical": true,
+    "events": 100,
+    "events_per_day": 100000.0,
+    "hardware_usd": 4000.0,
+    "price_in_per_m": 2.5,
+    "price_out_per_m": 10.0,
+    "profile": {
+      "inference": {
+        "hi": 500,
+        "lo": 150
+      },
+      "jwt_validate": {
+        "hi": 20,
+        "lo": 8
+      },
+      "max_inflight": 32,
+      "meta_prompt_tokens": 900,
+      "name": "azure-copilot",
+      "policy": {
+        "hi": 45,
+        "lo": 15
+      },
+      "retry_after_ms": 300,
+      "safety": {
+        "hi": 90,
+        "lo": 40
+      },
+      "token_issue": {
+        "hi": 220,
+        "lo": 120
+      },
+      "token_ttl_s": 3600,
+      "wan_rtt": {
+        "hi": 110,
+        "lo": 60
+      }
+    },
+    "schedule": "sequential",
+    "seed": 42,
+    "timestamp": "2026-11-01T13:10:22.895639600+00:00"
+  },
+  "paybacks": [
+    {
+      "comparison": "own GPUs (C) instead of A",
+      "days": 22.49750418312968
+    },
+    {
+      "comparison": "own GPUs (C) instead of B",
+      "days": 22.524424923276175
+    },
+    {
+      "comparison": "hybrid D instead of B",
+      "days": 26.33528104682742
+    }
+  ]
+}

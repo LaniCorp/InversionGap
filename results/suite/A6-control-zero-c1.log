@@ -1,0 +1,36 @@
+﻿inversion-gap · resolving edge endpoints…
+  model phi3:latest (format Json) on http://127.0.0.1:11435, http://127.0.0.1:11436
+  warming up model on 2 endpoint(s) (untimed)…
+    http://127.0.0.1:11435: ready in 0.44s
+    http://127.0.0.1:11436: ready in 0.45s
+  cloud: in-process mock gateway, synthetic upstream · profile zero (WAN 0ms, model 0ms, quota 1024, +0 meta-prompt tok)
+  [  1.0s] cloud 100/100 (3428.83 ops/s)   edge  17/100 (16.99 ops/s)
+  [  2.0s] cloud 100/100 (3428.83 ops/s)   edge  44/100 (21.98 ops/s)
+  [  3.0s] cloud 100/100 (3428.83 ops/s)   edge  79/100 (26.31 ops/s)
+  [  4.0s] cloud 100/100 (3428.83 ops/s)   edge 100/100 (29.06 ops/s)
+
+──────────────────────────────────────────────────────────────────────────────
+                                      Cloud/API-Wrapper        Sovereign Edge
+──────────────────────────────────────────────────────────────────────────────
+ Completed / failed                             100 / 0               100 / 0
+ Wall time                                       0.03 s                3.44 s
+ Throughput                               3428.83 ops/s           29.06 ops/s
+ Latency avg                                       0 ms                996 ms
+ Latency p50 / p95                          0 ms / 0 ms       988 ms / 1.54 s
+ Network RTT (cum.) / loopback                    15 ms                203 ms
+ Auth overhead (cum.)                    9 ms (1 fetch)                  0 ms
+ Gateway policy + safety (cum.)                    0 ms                  0 ms
+ 429 back-off / local queue (cum.)      0 ms (0 retries)                21.5 s
+ Serde overhead (cum.)                          4242 µs               2437 µs
+ Inference (cum.)                                  0 ms                77.9 s
+ Payload off-host                              180.5 KB                   0 B
+ Tokens in / out                           10435 / 2125          19145 / 2992
+ Cost                                           $0.0473                 $0.00
+ Rubric severity exact / ±1                 100% / 100%             34% / 72%
+ Rubric action exact                               100%                   32%
+──────────────────────────────────────────────────────────────────────────────
+ Cloud is 118.0x faster — edge pool under-provisioned (raise OLLAMA_NUM_PARALLEL / add GPU endpoints)
+ Latency multiple: 0.0x   Orchestration tax: 100% of each cloud call (0 ms non-inference)
+ Token meter: $0.0473 this run → $473 per 1M events
+──────────────────────────────────────────────────────────────────────────────
+ wrote C:\Development\Studio\InversionGap\results\suite\A6-control-zero-c1.json

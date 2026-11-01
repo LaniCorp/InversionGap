@@ -1,0 +1,56 @@
+╭────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                     THE COMPOUND LOOP TAX · 4-step agent per event: model → tool → model → tool                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭ A · Cloud-hosted agent ─────────────────────────────────────────────────╮╭ B · Sovereign orchestrator + cloud model ───────────────────────────────╮
+│██████████████████████████100/100  done  30.8s ██████████████████████████││██████████████████████████100/100  done  20.4s ██████████████████████████│
+│ Throughput                    3.25 events/s                             ││ Throughput                    4.91 events/s                             │
+│ Event latency avg / p95       2.39 s / 2.81 s                           ││ Event latency avg / p95       1.58 s / 2.13 s                           │
+│ Orchestration overhead / event1.68 s  (70% of latency)                  ││ Orchestration overhead / event967 ms  (61% of latency)                  │
+│   net · service · auth · 429  344 ms · 1.23 s · 104 ms · 0 ms           ││   net · service · auth · 429  343 ms · 623 ms · 0 ms · 0 ms             │
+│ Model compute / event         651 ms                                    ││ Model compute / event         612 ms                                    │
+│ Tool execution / event        20 µs                                     ││ Tool execution / event        13 µs                                     │
+│ Local GPU contention / event  0 ms                                      ││ Local GPU contention / event  0 ms                                      │
+│ Calls / event: model·tool·cross2.0 · 2.0 · 4.0                          ││ Calls / event: model·tool·cross2.0 · 2.0 · 2.0                          │
+│ Metered cost                  $0.0301  ($301/1M events)                 ││ Metered cost                  $0.0304  ($304/1M events)                 │
+│ Data off-host                 419.6 KB · 100% of events                 ││ Data off-host                 162.1 KB · 100% of events                 │
+│ Agreement sev / action        58% / 46%                                 ││ Agreement sev / action        55% / 48%                                 │
+│                                                                         ││                                                                         │
+│                                                                         ││                                                                         │
+│                                                                         ││                                                                         │
+│                                                                         ││                                                                         │
+│                                                                         ││                                                                         │
+│                                                                         ││                                                                         │
+╰─────────────────────────────────────────────────────────────────────────╯╰─────────────────────────────────────────────────────────────────────────╯
+╭ C · Fully local edge ───────────────────────────────────────────────────╮╭ D · Hybrid sovereign router ────────────────────────────────────────────╮
+│██████████████████████████100/100  done  14.4s ██████████████████████████││██████████████████████████50/100  running  8.1s                          │
+│ Throughput                    6.97 events/s                             ││ Throughput                    6.15 events/s                             │
+│ Event latency avg / p95       3.99 s / 4.74 s                           ││ Event latency avg / p95       3.88 s / 4.68 s                           │
+│ Orchestration overhead / event4 ms  (0% of latency)                     ││ Orchestration overhead / event88 ms  (2% of latency)                    │
+│   net · service · auth · 429  4 ms · 0 ms · 0 ms · 0 ms                 ││   net · service · auth · 429  44 ms · 44 ms · 0 ms · 0 ms               │
+│ Model compute / event         3.71 s                                    ││ Model compute / event         3.55 s                                    │
+│ Tool execution / event        24 µs                                     ││ Tool execution / event        25 µs                                     │
+│ Local GPU contention / event  284 ms                                    ││ Local GPU contention / event  242 ms                                    │
+│ Calls / event: model·tool·cross2.0 · 2.0 · 0.0                          ││ Calls / event: model·tool·cross2.2 · 2.0 · 0.2                          │
+│ Metered cost                  $0.00                                     ││ Metered cost                  $0.0016  ($31.16/1M events)               │
+│ Data off-host                 0 B · 0% of events                        ││ Data off-host                 11.9 KB · 22% of events                   │
+│ Agreement sev / action        54% / 48%                                 ││ Agreement sev / action        56% / 58%                                 │
+│                                                                         ││ Escalated to cloud            11 (22%)                                  │
+│                                                                         ││                                                                         │
+│                                                                         ││                                                                         │
+│                                                                         ││                                                                         │
+│                                                                         ││                                                                         │
+│                                                                         ││                                                                         │
+╰─────────────────────────────────────────────────────────────────────────╯╰─────────────────────────────────────────────────────────────────────────╯
+╔ ◆ The Compound Loop Tax ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Orchestration overhead per event (time that is neither model compute, tool work nor local GPU contention)                                          ║
+║ A     1.68 s ████████████████████████████████████████████████████████████████████████████████████████████████████████████  4 boundary crossings/eve║
+║ B     967 ms ██████████████████████████████████████████████████████████████  2 boundary crossings/event                                            ║
+║ C       4 ms █  0 boundary crossings/event                                                                                                         ║
+║ D      88 ms ██████  0.2 boundary crossings/event                                                                                                  ║
+║ Payback of owned GPUs ($4000) at 100000 events/day  own GPUs (C) instead of A: 133.8 days  ·  own GPUs (C) instead of B: 132.4 days  ·  hybrid D in║
+║ Metered $ per 1M events   A $301  ·  B $304  ·  C $0.0000  ·  D $31.16                                                                             ║
+║ Data egress (events off-host) A 100% (419.6 KB)  ·  B 100% (162.1 KB)  ·  C 0% (0 B)  ·  D 22% (11.9 KB)                                           ║
+║ Agreement, action exact   A 46%  ·  B 48%  ·  C 48%  ·  D 58%   (D escalates if confidence < 0.85 or severity = critical)                          ║
+║                                                                                                                                                    ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+ running — q to abort   A: simulated runtime hops (azure-copilot: WAN 60-110ms, JWT 8-20ms, policy 15-45ms, safety 40-90ms on model steps) · B/D cloud

@@ -1,0 +1,119 @@
+﻿inversion-gap · resolving edge endpoints…
+  model phi4:latest (format Json) on http://127.0.0.1:11435, http://127.0.0.1:11436
+  warming up model on 2 endpoint(s) (untimed)…
+    http://127.0.0.1:11435: ready in 0.74s
+    http://127.0.0.1:11436: ready in 0.73s
+  cloud: real endpoint https://ais-inversiongap-xxxxx.openai.azure.com/openai/deployments/phi-4/chat/completions?api-version=2024-10-21 (model phi-4, auth ApiKey)
+  [  1.0s] cloud   0/40 (0.00 ops/s)   edge   8/40 (7.99 ops/s)
+  [  2.0s] cloud   1/40 (0.50 ops/s)   edge  40/40 (22.21 ops/s)
+  [  3.0s] cloud   1/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [  4.0s] cloud   1/40 (0.25 ops/s)   edge  40/40 (22.21 ops/s)
+  [  5.0s] cloud   2/40 (0.40 ops/s)   edge  40/40 (22.21 ops/s)
+  [  6.0s] cloud   2/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [  7.0s] cloud   2/40 (0.29 ops/s)   edge  40/40 (22.21 ops/s)
+  [  8.0s] cloud   3/40 (0.37 ops/s)   edge  40/40 (22.21 ops/s)
+  [  9.0s] cloud   3/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 10.0s] cloud   3/40 (0.30 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 11.0s] cloud   4/40 (0.36 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 12.0s] cloud   4/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 13.0s] cloud   4/40 (0.31 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 14.0s] cloud   5/40 (0.36 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 15.0s] cloud   5/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 16.0s] cloud   5/40 (0.31 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 17.0s] cloud   6/40 (0.35 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 18.0s] cloud   6/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 19.0s] cloud   6/40 (0.32 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 20.0s] cloud   7/40 (0.35 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 21.0s] cloud   7/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 22.0s] cloud   9/40 (0.32 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 23.0s] cloud  10/40 (0.35 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 24.0s] cloud  10/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 25.0s] cloud  11/40 (0.32 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 26.0s] cloud  12/40 (0.35 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 27.0s] cloud  12/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 28.0s] cloud  12/40 (0.32 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 29.0s] cloud  13/40 (0.34 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 30.0s] cloud  13/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 31.0s] cloud  14/40 (0.32 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 32.0s] cloud  15/40 (0.34 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 33.1s] cloud  15/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 34.1s] cloud  16/40 (0.32 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 35.1s] cloud  17/40 (0.34 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 36.1s] cloud  17/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 37.1s] cloud  17/40 (0.32 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 38.1s] cloud  18/40 (0.34 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 39.1s] cloud  18/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 40.1s] cloud  18/40 (0.32 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 41.1s] cloud  19/40 (0.34 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 42.1s] cloud  19/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 43.1s] cloud  19/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 44.1s] cloud  20/40 (0.34 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 45.1s] cloud  20/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 46.1s] cloud  21/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 47.1s] cloud  22/40 (0.34 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 48.1s] cloud  22/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 49.1s] cloud  22/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 50.1s] cloud  23/40 (0.34 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 51.1s] cloud  23/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 52.1s] cloud  23/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 53.1s] cloud  24/40 (0.34 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 54.1s] cloud  24/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 55.1s] cloud  24/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 56.1s] cloud  25/40 (0.34 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 57.1s] cloud  25/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 58.1s] cloud  27/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 59.1s] cloud  28/40 (0.34 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 60.1s] cloud  28/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 61.1s] cloud  28/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 62.1s] cloud  29/40 (0.34 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 63.1s] cloud  29/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 64.1s] cloud  29/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 65.1s] cloud  30/40 (0.34 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 66.1s] cloud  30/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 67.1s] cloud  30/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 68.1s] cloud  31/40 (0.34 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 69.1s] cloud  31/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 70.1s] cloud  31/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 71.1s] cloud  32/40 (0.34 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 72.1s] cloud  32/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 73.1s] cloud  32/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 74.1s] cloud  33/40 (0.34 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 75.1s] cloud  33/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 76.1s] cloud  33/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 77.1s] cloud  33/40 (0.32 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 78.1s] cloud  34/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 79.1s] cloud  35/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 80.1s] cloud  36/40 (0.34 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 81.1s] cloud  36/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 82.1s] cloud  37/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 83.1s] cloud  38/40 (0.34 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 84.1s] cloud  38/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 85.1s] cloud  39/40 (0.33 ops/s)   edge  40/40 (22.21 ops/s)
+  [ 86.1s] cloud  40/40 (0.34 ops/s)   edge  40/40 (22.21 ops/s)
+
+──────────────────────────────────────────────────────────────────────────────
+                                      Cloud/API-Wrapper        Sovereign Edge
+──────────────────────────────────────────────────────────────────────────────
+ Completed / failed                             29 / 11                40 / 0
+ Wall time                                      85.67 s                1.80 s
+ Throughput                                  0.34 ops/s           22.21 ops/s
+ Latency avg                                     16.1 s                978 ms
+ Latency p50 / p95                      18.7 s / 24.1 s       1.00 s / 1.21 s
+ Network RTT (cum.) / loopback                   40.1 s                168 ms
+ Auth overhead (cum.)                    0 ms (0 fetch)                  0 ms
+ Gateway / service overhead (cum.)                  0 ms                  0 ms
+ 429 back-off / local queue (cum.) 604.5 s (219 retries)                4.72 s
+ Serde overhead (cum.)                          1085 µs                795 µs
+ Inference (cum.)                                  0 ms                34.2 s
+ Payload off-host                              149.9 KB                   0 B
+ Tokens in / out                             4065 / 694            5838 / 965
+ Cost                                           $0.0009                 $0.00
+ Rubric severity exact / ±1                   66% / 97%            78% / 100%
+ Rubric action exact                                59%                   55%
+──────────────────────────────────────────────────────────────────────────────
+ ⚡ Edge is 65.6x Faster & 100% Sovereign
+ Latency multiple: 16.5x   Orchestration tax: 100% of each cloud call (16.1 s non-inference)
+ Token meter: $0.0009 this run → $29.49 per 1M events
+──────────────────────────────────────────────────────────────────────────────
+ last cloud error: HTTP 429 Too Many Requests: {"error":{"code":"RateLimitReached","message":"Your requests to Phi-4 for phi-4 in westus have exceeded request rate limit.","details":"Your requests to Phi-4 for phi-4 in westus have exceeded request
+ wrote C:\Development\Studio\InversionGap\results\azure\P2-phi4-same-model-c8.json

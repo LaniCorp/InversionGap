@@ -1,0 +1,42 @@
+﻿inversion-gap · resolving edge endpoints…
+  model phi3:latest (format Json) on http://127.0.0.1:11435, http://127.0.0.1:11436
+  warming up model on 2 endpoint(s) (untimed)…
+    http://127.0.0.1:11435: ready in 0.64s
+    http://127.0.0.1:11436: ready in 0.66s
+  cloud: real endpoint https://aoai-inversiongap-xxxxx.openai.azure.com/openai/deployments/gpt-4o-global/chat/completions?api-version=2024-10-21 (model gpt-4o-global, auth ApiKey)
+  [  1.0s] cloud   0/100 (0.00 ops/s)   edge  15/100 (15.02 ops/s)
+  [  2.0s] cloud  11/100 (5.49 ops/s)   edge  44/100 (22.00 ops/s)
+  [  3.0s] cloud  14/100 (4.66 ops/s)   edge  73/100 (24.33 ops/s)
+  [  4.0s] cloud  21/100 (5.24 ops/s)   edge 100/100 (27.04 ops/s)
+  [  5.0s] cloud  34/100 (6.79 ops/s)   edge 100/100 (27.04 ops/s)
+  [  6.0s] cloud  51/100 (8.49 ops/s)   edge 100/100 (27.04 ops/s)
+  [  7.0s] cloud  65/100 (9.28 ops/s)   edge 100/100 (27.04 ops/s)
+  [  8.0s] cloud  79/100 (9.87 ops/s)   edge 100/100 (27.04 ops/s)
+  [  9.0s] cloud  96/100 (10.66 ops/s)   edge 100/100 (27.04 ops/s)
+  [ 10.0s] cloud 100/100 (10.58 ops/s)   edge 100/100 (27.04 ops/s)
+
+──────────────────────────────────────────────────────────────────────────────
+                                      Cloud/API-Wrapper        Sovereign Edge
+──────────────────────────────────────────────────────────────────────────────
+ Completed / failed                             100 / 0               100 / 0
+ Wall time                                       9.45 s                3.70 s
+ Throughput                                 10.58 ops/s           27.04 ops/s
+ Latency avg                                     2.67 s                1.05 s
+ Latency p50 / p95                      2.60 s / 4.58 s       1.03 s / 1.45 s
+ Network RTT (cum.) / loopback                  110.9 s                317 ms
+ Auth overhead (cum.)                    0 ms (0 fetch)                  0 ms
+ Gateway / service overhead (cum.)               134.2 s                  0 ms
+ 429 back-off / local queue (cum.)      0 ms (0 retries)                21.3 s
+ Serde overhead (cum.)                          4531 µs               2618 µs
+ Inference (cum.)                                21.5 s                83.6 s
+ Payload off-host                               58.6 KB                   0 B
+ Tokens in / out                           14176 / 2355          19145 / 2952
+ Cost                                           $0.0590                 $0.00
+ Rubric severity exact / ±1                  50% / 100%             35% / 72%
+ Rubric action exact                                56%                   31%
+──────────────────────────────────────────────────────────────────────────────
+ ⚡ Edge is 2.6x Faster & 100% Sovereign
+ Latency multiple: 2.5x   Orchestration tax: 92% of each cloud call (2.45 s non-inference)
+ Token meter: $0.0590 this run → $590 per 1M events
+──────────────────────────────────────────────────────────────────────────────
+ wrote C:\Development\Studio\InversionGap\results\azure\G2-gpt4o-c32.json

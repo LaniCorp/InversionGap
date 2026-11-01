@@ -1,0 +1,49 @@
+﻿inversion-gap · resolving edge endpoints…
+  model llama3.3:70b (format Json) on http://127.0.0.1:11435
+  warming up model on 1 endpoint(s) (untimed)…
+    http://127.0.0.1:11435: ready in 0.90s
+  cloud: real endpoint https://aoai-inversiongap-xxxxx.openai.azure.com/openai/deployments/gpt-41-mini-global/chat/completions?api-version=2024-10-21 (model gpt-41-mini-global, auth ApiKey)
+  [  1.0s] cloud  15/100 (14.98 ops/s)   edge   0/100 (0.00 ops/s)
+  [  2.0s] cloud  43/100 (21.47 ops/s)   edge   0/100 (0.00 ops/s)
+  [  3.0s] cloud  76/100 (25.29 ops/s)   edge   9/100 (3.00 ops/s)
+  [  4.0s] cloud 100/100 (26.68 ops/s)   edge  15/100 (3.75 ops/s)
+  [  5.0s] cloud 100/100 (26.68 ops/s)   edge  17/100 (3.40 ops/s)
+  [  6.0s] cloud 100/100 (26.68 ops/s)   edge  29/100 (4.83 ops/s)
+  [  7.0s] cloud 100/100 (26.68 ops/s)   edge  32/100 (4.57 ops/s)
+  [  8.0s] cloud 100/100 (26.68 ops/s)   edge  40/100 (4.99 ops/s)
+  [  9.0s] cloud 100/100 (26.68 ops/s)   edge  48/100 (5.33 ops/s)
+  [ 10.0s] cloud 100/100 (26.68 ops/s)   edge  55/100 (5.49 ops/s)
+  [ 11.0s] cloud 100/100 (26.68 ops/s)   edge  64/100 (5.81 ops/s)
+  [ 12.0s] cloud 100/100 (26.68 ops/s)   edge  64/100 (5.33 ops/s)
+  [ 13.0s] cloud 100/100 (26.68 ops/s)   edge  73/100 (5.61 ops/s)
+  [ 14.0s] cloud 100/100 (26.68 ops/s)   edge  80/100 (5.71 ops/s)
+  [ 15.0s] cloud 100/100 (26.68 ops/s)   edge  83/100 (5.53 ops/s)
+  [ 16.0s] cloud 100/100 (26.68 ops/s)   edge  96/100 (5.99 ops/s)
+  [ 17.0s] cloud 100/100 (26.68 ops/s)   edge  96/100 (5.64 ops/s)
+  [ 18.0s] cloud 100/100 (26.68 ops/s)   edge 100/100 (5.70 ops/s)
+
+──────────────────────────────────────────────────────────────────────────────
+                                      Cloud/API-Wrapper        Sovereign Edge
+──────────────────────────────────────────────────────────────────────────────
+ Completed / failed                             100 / 0               100 / 0
+ Wall time                                       3.75 s               17.55 s
+ Throughput                                 26.68 ops/s            5.70 ops/s
+ Latency avg                                     1.02 s                2.56 s
+ Latency p50 / p95                      1.01 s / 1.48 s       2.53 s / 3.40 s
+ Network RTT (cum.) / loopback                   57.4 s                119 ms
+ Auth overhead (cum.)                    0 ms (0 fetch)                  0 ms
+ Gateway / service overhead (cum.)                24.5 s                  0 ms
+ 429 back-off / local queue (cum.)      0 ms (0 retries)                23.4 s
+ Serde overhead (cum.)                          3359 µs               1870 µs
+ Inference (cum.)                                20.0 s               232.6 s
+ Payload off-host                               59.1 KB                   0 B
+ Tokens in / out                           14176 / 2361          14492 / 2285
+ Cost                                           $0.0094                 $0.00
+ Rubric severity exact / ±1                  58% / 100%            51% / 100%
+ Rubric action exact                                60%                   60%
+──────────────────────────────────────────────────────────────────────────────
+ Cloud is 4.7x faster — edge pool under-provisioned (raise OLLAMA_NUM_PARALLEL / add GPU endpoints)
+ Latency multiple: 0.4x   Orchestration tax: 80% of each cloud call (819 ms non-inference)
+ Token meter: $0.0094 this run → $94.48 per 1M events
+──────────────────────────────────────────────────────────────────────────────
+ wrote C:\Development\Studio\InversionGap\results\azure\E1-llama33-vs-global-c32.json

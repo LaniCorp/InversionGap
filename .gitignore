@@ -1,0 +1,10 @@
+/target
+/logs/
+.edge-pool.pids
+
+# Kept private: the PDF report and its generator (they name the Azure subscription and resources),
+# local Azure resource names, unredacted results, and screenshot launchers with local paths.
+/report/
+/results/azure-resource.txt
+/.private/
+/results/**/launch-*.ps1
